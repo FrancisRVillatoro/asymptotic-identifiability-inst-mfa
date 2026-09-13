@@ -23,5 +23,11 @@
     "code": "GPL-3.0-only",
     "original_data_figures_documentation": "CC-BY-4.0",
     "third_party": "see THIRD_PARTY_NOTICES.md"
-  }
+  },
+  "zenodo": {
+    "version": "1.0.0",
+    "version_doi": "10.5281/zenodo.22737809",
+    "concept_doi": "10.5281/zenodo.22737808"
+  },
+  "github_release": "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa/releases/tag/v1.0.0"
 }

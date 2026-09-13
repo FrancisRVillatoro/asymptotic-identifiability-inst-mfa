@@ -73,3 +73,13 @@ Biber/LaTeX build logs, or manuscript-verification scripts. Rendered scientific
 figures are included only as reproducibility outputs; their scientific source
 code lives under `figure_sources/` or the corresponding validation directory.
 Run `python scripts/guard_no_paper_artifacts.py` to verify this policy.
+
+## Archived release and DOI
+
+The exact reproducibility release supporting the associated article is:
+
+- **Version v1.0.0:** https://doi.org/10.5281/zenodo.22737809
+- **Concept DOI (all versions):** https://doi.org/10.5281/zenodo.22737808
+
+For exact computational reproducibility of the published results, please cite
+the version DOI `10.5281/zenodo.22737809`.
