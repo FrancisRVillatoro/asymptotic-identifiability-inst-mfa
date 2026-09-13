@@ -1,0 +1,55 @@
+[
+  {
+    "cut_after": "G3P",
+    "gap_log10": 0.5655867529810134,
+    "ratio": 3.677788521178854,
+    "raw_fast_size": 3,
+    "raw_fast_pools": [
+      "F6P",
+      "TA",
+      "GAP"
+    ],
+    "eligible_fast_pools": [
+      "F6P",
+      "GAP"
+    ],
+    "eligible_fast_size": 2
+  },
+  {
+    "cut_after": "Mal",
+    "gap_log10": 0.0924411231767448,
+    "ratio": 1.2372034522600097,
+    "raw_fast_size": 7,
+    "raw_fast_pools": [
+      "G2P",
+      "S7P",
+      "E4P",
+      "G3P",
+      "F6P",
+      "TA",
+      "GAP"
+    ],
+    "eligible_fast_pools": [
+      "G2P",
+      "S7P",
+      "E4P",
+      "G3P",
+      "F6P",
+      "GAP"
+    ],
+    "eligible_fast_size": 6
+  },
+  {
+    "cut_after": "TA",
+    "gap_log10": 0.0226832688099594,
+    "ratio": 1.0536182118180455,
+    "raw_fast_size": 1,
+    "raw_fast_pools": [
+      "GAP"
+    ],
+    "eligible_fast_pools": [
+      "GAP"
+    ],
+    "eligible_fast_size": 1
+  }
+]

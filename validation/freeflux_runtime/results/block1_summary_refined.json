@@ -1,0 +1,28 @@
+{
+  "freeflux_version": "0.3.8",
+  "git_commit": "ec05c47bbc2e4ac58bb85d39408ff4ef4016a15c",
+  "execution_type": "source-faithful extraction of the official simulation path",
+  "python_environment": "Python 3.13 compatibility audit",
+  "compatibility_changes": [
+    "np.float -> float",
+    "scipy.linalg.pinv2 -> scipy.linalg.pinv",
+    "fitting/optimization/result-display layers omitted"
+  ],
+  "official_fixture_round_match": true,
+  "official_grid_max_abs": 0.004583549773031936,
+  "official_grid_rms": 0.0007834498695758882,
+  "finest_step": 0.006250000000000089,
+  "finest_max_abs": 5.333544521590738e-07,
+  "finest_rms": 1.1846036542449242e-07,
+  "trajectory_order_max": 2.0003023868651,
+  "trajectory_order_rms": 1.9998946140900322,
+  "sensitivity_step": 0.00625,
+  "sensitivity_global_max_abs": 1.156630347054488e-06,
+  "sensitivity_global_rms": 1.1378604836602514e-07,
+  "sensitivity_relative_Frobenius": 3.573637975646849e-06,
+  "sensitivity_worst_parameter": "log v6b",
+  "sensitivity_worst_relative_L2": 1.76631175826832e-05,
+  "sensitivity_order_max": 2.0000069240333023,
+  "sensitivity_order_rms": 1.9999317515031838,
+  "sensitivity_order_relative_Frobenius": 1.9999317515031838
+}

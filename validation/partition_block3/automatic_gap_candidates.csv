@@ -1,0 +1,4 @@
+cut_after,gap_log10,ratio,raw_fast_size,raw_fast_pools,eligible_fast_pools,eligible_fast_size
+G3P,0.5655867529810134,3.677788521178854,3,"['F6P', 'TA', 'GAP']","['F6P', 'GAP']",2
+Mal,0.0924411231767448,1.2372034522600097,7,"['G2P', 'S7P', 'E4P', 'G3P', 'F6P', 'TA', 'GAP']","['G2P', 'S7P', 'E4P', 'G3P', 'F6P', 'GAP']",6
+TA,0.0226832688099594,1.0536182118180455,1,['GAP'],['GAP'],1

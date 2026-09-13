@@ -1,0 +1,108 @@
+{
+  "noise_model": {
+    "family": "pseudocount-regularized ILR Gaussian",
+    "delta": 0.0001,
+    "sigma_ilr": 0.08,
+    "sigma_log_pool": 0.1,
+    "seed": 20260905
+  },
+  "epsilon_profile": 0.015625,
+  "local": [
+    {
+      "design": "baseline",
+      "largest_sd": 33851.91866193869,
+      "second_largest_sd": 3254.6410836635123,
+      "sigma_min": 4.897396398031758e-06,
+      "sigma_second_min": 2.954042461531752e-05
+    },
+    {
+      "design": "F6P",
+      "largest_sd": 47493.68452310766,
+      "second_largest_sd": 3254.815842464415,
+      "sigma_min": 2.105548303722937e-05,
+      "sigma_second_min": 0.0003072369412569
+    },
+    {
+      "design": "GAP",
+      "largest_sd": 46295.72862892968,
+      "second_largest_sd": 3255.285985149775,
+      "sigma_min": 2.1600327913629057e-05,
+      "sigma_second_min": 0.0003071926034827
+    },
+    {
+      "design": "both",
+      "largest_sd": 3255.4727355661485,
+      "second_largest_sd": 2683.331547387721,
+      "sigma_min": 0.0003071750434689,
+      "sigma_second_min": 0.0003726709829448
+    }
+  ],
+  "profile_intervals": [
+    {
+      "design": "baseline",
+      "lo95": null,
+      "hi95": null,
+      "width95": null
+    },
+    {
+      "design": "F6P",
+      "lo95": null,
+      "hi95": null,
+      "width95": null
+    },
+    {
+      "design": "GAP",
+      "lo95": null,
+      "hi95": null,
+      "width95": null
+    },
+    {
+      "design": "both",
+      "lo95": null,
+      "hi95": null,
+      "width95": null
+    }
+  ],
+  "weak_direction_top": [
+    [
+      "logC_GAP",
+      -0.7162027203401586
+    ],
+    [
+      "logC_F6P",
+      0.6977114658467395
+    ],
+    [
+      "logC_TA",
+      -0.009009899551900702
+    ],
+    [
+      "flux_tangent_9",
+      0.008979839612175225
+    ],
+    [
+      "flux_tangent_10",
+      -0.0044610683628616135
+    ],
+    [
+      "flux_tangent_29",
+      -0.0037700708065559058
+    ],
+    [
+      "flux_tangent_28",
+      0.003166161044239693
+    ],
+    [
+      "flux_tangent_16",
+      0.002657693681032158
+    ],
+    [
+      "logC_PG",
+      0.002554229928346056
+    ],
+    [
+      "logC_DHAP",
+      0.0024165050526606044
+    ]
+  ]
+}

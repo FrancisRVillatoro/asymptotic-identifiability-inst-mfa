@@ -1,0 +1,10 @@
+{
+  "gap_metric": "g_i = log10(k_(i+1)/k_i)",
+  "tail_limit": "q_max = max(3, ceil(n/4))",
+  "candidate_rule": "local maxima of g_i among cuts leaving <= q_max pools in fast suffix",
+  "primary_rule": "largest such g_i",
+  "semantic_filter": "remove model-declared auxiliary/dummy atom-transfer pools before biochemical interpretation",
+  "spectral_audit": "eigenvalues of F_ff = M_ff^{-1} A_ff for each EMU size at nominal point",
+  "order_audit": "fit singular-value slopes over epsilon=1/64,1/128,1/256,1/512; classify m=0 if |slope|<0.15, m=1 if 0.75<slope<1.25, m=2 if 1.75<slope<2.25",
+  "robustness": "repeat primary raw, semantic-filtered, +/- boundary, and secondary local-gap candidates; compare principal angles of m=1 subspaces"
+}

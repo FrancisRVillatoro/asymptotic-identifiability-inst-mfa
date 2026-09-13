@@ -1,0 +1,28 @@
+FreeFlux 0.3.8 source-faithful runtime validation
+================================================================
+freeflux_version: 0.3.8
+git_commit: ec05c47bbc2e4ac58bb85d39408ff4ef4016a15c
+official_fixture_round_match: True
+official_grid_max_abs_vs_exact: 0.004583549773031936
+finest_grid_max_abs_vs_exact: 5.333544521590738e-07
+finest_grid_rms_vs_exact: 1.1846036542449242e-07
+observed_convergence_order_max_error: 2.0003023868651
+sensitivity_internal_max_step: 0.0125
+sensitivity_global_max_abs: 4.626543592678445e-06
+sensitivity_global_rms: 4.5512266280693815e-07
+sensitivity_global_relative_Frobenius: 1.4293875696890994e-05
+sensitivity_worst_parameter_relative_L2: (7.073428311239958e-05, 'log v6b')
+target_emus: ['Glu_123', 'Glu_12345', 'Cit_2345']
+target_times: [0.0, 0.1, 0.2, 0.5, 1.0, 2.0]
+compatibility_changes: ['np.float -> float', 'scipy.linalg.pinv2 -> pinv', 'fitting/optimization/display layers omitted']
+
+Per-parameter sensitivity comparison:
+  log v3       max=1.390e-06 rms=3.522e-07 relL2=9.764e-06
+  log v4       max=4.627e-06 rms=9.964e-07 relL2=1.722e-05
+  log v6b      max=6.875e-08 rms=1.377e-08 relL2=7.073e-05
+  log C_OAA    max=1.389e-07 rms=2.833e-08 relL2=7.001e-05
+  log C_Cit    max=3.582e-06 rms=7.981e-07 relL2=1.220e-05
+  log C_AKG    max=5.115e-07 rms=1.072e-07 relL2=2.425e-05
+  log C_Suc    max=1.399e-06 rms=2.895e-07 relL2=3.971e-05
+  log C_Fum    max=3.575e-07 rms=7.703e-08 relL2=6.834e-05
+  log C_Glu    max=5.439e-07 rms=9.097e-08 relL2=8.150e-06

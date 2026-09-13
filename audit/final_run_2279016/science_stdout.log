@@ -1,0 +1,636 @@
+=== START Block 1A FreeFlux runtime vs exact | 2026-09-10T19:14:16Z ===
+official 6 0.004583549773031936 0.0007834498695758882 0.002118305402076938 0.045844078063964844
+h0.1 21 0.00013854025350967802 3.068938913501593e-05 8.297850483571805e-05 0.1738119125366211
+h0.05 41 3.4158097587222436e-05 7.579970658741179e-06 2.0494856681370354e-05 0.3425781726837158
+h0.025 81 8.534241362045947e-06 1.8950683913135111e-06 5.12391892131883e-06 0.678225040435791
+h0.0125 161 2.1334770895498067e-06 4.7383330938222117e-07 1.281158754282143e-06 1.3345832824707031
+h0.00625 321 5.333544521590738e-07 1.1846036542449242e-07 3.2029519916386147e-07 2.6566414833068848
+finite-difference exact...
+finite-difference runtime...
+FreeFlux 0.3.8 source-faithful runtime validation
+================================================================
+freeflux_version: 0.3.8
+git_commit: ec05c47bbc2e4ac58bb85d39408ff4ef4016a15c
+official_fixture_round_match: True
+official_grid_max_abs_vs_exact: 0.004583549773031936
+finest_grid_max_abs_vs_exact: 5.333544521590738e-07
+finest_grid_rms_vs_exact: 1.1846036542449242e-07
+observed_convergence_order_max_error: 2.0003023868651
+sensitivity_internal_max_step: 0.0125
+sensitivity_global_max_abs: 4.626543592678445e-06
+sensitivity_global_rms: 4.5512266280693815e-07
+sensitivity_global_relative_Frobenius: 1.4293875696890994e-05
+sensitivity_worst_parameter_relative_L2: (7.073428311239958e-05, 'log v6b')
+target_emus: ['Glu_123', 'Glu_12345', 'Cit_2345']
+target_times: [0.0, 0.1, 0.2, 0.5, 1.0, 2.0]
+compatibility_changes: ['np.float -> float', 'scipy.linalg.pinv2 -> pinv', 'fitting/optimization/display layers omitted']
+
+Per-parameter sensitivity comparison:
+  log v3       max=1.390e-06 rms=3.522e-07 relL2=9.764e-06
+  log v4       max=4.627e-06 rms=9.964e-07 relL2=1.722e-05
+  log v6b      max=6.875e-08 rms=1.377e-08 relL2=7.073e-05
+  log C_OAA    max=1.389e-07 rms=2.833e-08 relL2=7.001e-05
+  log C_Cit    max=3.582e-06 rms=7.981e-07 relL2=1.220e-05
+  log C_AKG    max=5.115e-07 rms=1.072e-07 relL2=2.425e-05
+  log C_Suc    max=1.399e-06 rms=2.895e-07 relL2=3.971e-05
+  log C_Fum    max=3.575e-07 rms=7.703e-08 relL2=6.834e-05
+  log C_Glu    max=5.439e-07 rms=9.097e-08 relL2=8.150e-06
+=== END   Block 1A FreeFlux runtime vs exact | elapsed=32 s ===
+=== START Block 1B FreeFlux sensitivity refinement | 2026-09-10T19:14:48Z ===
+runtime Jacobian refinement: h=0.00625, n_timepoints=321
+elapsed_seconds=50.880826
+global_max_abs=1.1566303470544881e-06
+global_rms=1.1378604836602514e-07
+relative_Frobenius=3.5736379756468492e-06
+worst_parameter=log v6b
+worst_relative_L2=1.7663117582683201e-05
+{
+  "freeflux_version": "0.3.8",
+  "git_commit": "ec05c47bbc2e4ac58bb85d39408ff4ef4016a15c",
+  "execution_type": "source-faithful extraction of the official simulation path",
+  "python_environment": "Python 3.13 compatibility audit",
+  "compatibility_changes": [
+    "np.float -> float",
+    "scipy.linalg.pinv2 -> scipy.linalg.pinv",
+    "fitting/optimization/result-display layers omitted"
+  ],
+  "official_fixture_round_match": true,
+  "official_grid_max_abs": 0.004583549773031936,
+  "official_grid_rms": 0.0007834498695758882,
+  "finest_step": 0.006250000000000089,
+  "finest_max_abs": 5.333544521590738e-07,
+  "finest_rms": 1.1846036542449242e-07,
+  "trajectory_order_max": 2.0003023868651,
+  "trajectory_order_rms": 1.9998946140900322,
+  "sensitivity_step": 0.00625,
+  "sensitivity_global_max_abs": 1.156630347054488e-06,
+  "sensitivity_global_rms": 1.1378604836602514e-07,
+  "sensitivity_relative_Frobenius": 3.573637975646849e-06,
+  "sensitivity_worst_parameter": "log v6b",
+  "sensitivity_worst_relative_L2": 1.76631175826832e-05,
+  "sensitivity_order_max": 2.0000069240333023,
+  "sensitivity_order_rms": 1.9999317515031838,
+  "sensitivity_order_relative_Frobenius": 1.9999317515031838
+}
+=== END   Block 1B FreeFlux sensitivity refinement | elapsed=58 s ===
+=== START Block 2A Synechocystis nominal | 2026-09-10T19:15:46Z ===
+prepare...
+EAM sizes {1: 123, 2: 88, 3: 43, 4: 21, 5: 19, 6: 4, 7: 5}
+simulate...
+done targets ['G3P_23', 'G3P_123', 'DHAP_123', 'PEP_123', 'Fum_1234', 'R5P_12345', 'RuBP_12345', 'Cit_12345', 'Cit_123456', 'S7P_1234567']
+n obs 318
+G3P_23 t240 [0.31028534 0.48973337 0.19998128]
+G3P_123 t240 [0.16481881 0.40370746 0.33627281 0.09520091]
+DHAP_123 t240 [0.1666141  0.40442306 0.33463962 0.09432322]
+PEP_123 t240 [0.17263328 0.40597765 0.32959911 0.09178996]
+Fum_1234 t240 [0.15248137 0.34270738 0.32641748 0.15051826 0.02787551]
+R5P_12345 t240 [0.048918   0.20033223 0.33258087 0.27931503 0.11853515 0.02031871]
+RuBP_12345 t240 [0.05163274 0.20596143 0.3340929  0.27473497 0.11433414 0.01924383]
+Cit_12345 t240 [0.11419696 0.27679839 0.32184878 0.20651289 0.07057212 0.01007086]
+Cit_123456 t240 [0.07465341 0.21130439 0.29672358 0.24951812 0.12700089 0.03629669
+ 0.00450292]
+S7P_1234567 t240 [0.0150181  0.08549798 0.21027733 0.28944564 0.2407286  0.12093795
+ 0.03397677 0.00411764]
+=== END   Block 2A Synechocystis nominal | elapsed=12 s ===
+=== START Block 2B Synechocystis joint sensitivity | 2026-09-10T19:15:58Z ===
+param 10 / 60
+param 20 / 60
+param 30 / 60
+param 40 / 60
+param 50 / 60
+param 60 / 60
+{
+  "stoich_shape": [
+    31,
+    60
+  ],
+  "stoich_rank": 31,
+  "directional_fluxes": 60,
+  "flux_dof": 29,
+  "pools": 31,
+  "joint_dim": 60,
+  "obs_dim": 215,
+  "nominal_balance_residual_norm": 0.032632431238823756,
+  "nominal_balance_residual_max": 0.032632431238823756,
+  "nominal_balance_residual_metabolite": "GAP",
+  "steady_state_projection_rel": 8.440265299893499e-05,
+  "steady_state_projection_max_abs": 0.008311889877790968,
+  "projected_balance_residual_norm": 1.8538038001217897e-13,
+  "prepare_seconds": 10.676333665847778,
+  "derivative_seconds": 0.7939395904541016,
+  "sigma_max": 0.8398853228235122,
+  "sigma_min": 8.903615982394258e-16,
+  "rank_rel_1e8": 59,
+  "rank_rel_1e10": 59,
+  "rank_rel_1e12": 59,
+  "rank_rel_1e14": 59,
+  "global_scale_residual": 2.78805802126721e-15
+}
+weakest [1.05466341e-04 9.21123271e-05 7.01690640e-05 6.15292354e-05
+ 5.40313686e-05 4.23880427e-05 3.92460388e-05 1.99625125e-05
+ 1.38282544e-05 5.03220389e-06 3.75624507e-06 2.89651523e-06
+ 1.64685671e-06 7.92925170e-07 8.90361598e-16]
+{'asc': 1, 'sigma': 8.903615982394258e-16, 'top_flux_rel': [('rpe_f', 0.10482848367565484), ('glyk_b', 0.10482848367542806), ('glyk_f', 0.1048284836754029), ('tal1_b', 0.10482848367513671), ('tal1_f', 0.10482848367510118), ('sbp', 0.10482848367476537), ('sba', 0.10482848367476484), ('gpm_b', 0.10482848367402045)], 'top_logC': [('Gc', 0.10482848371751302), ('F6P', 0.1048284836960281), ('Ga', 0.1048284836756647), ('SBP', 0.10482848367455835), ('TK', 0.10482848367318713), ('G2P', 0.10482848367316192), ('PEP', 0.10482848367308718), ('Mal', 0.1048284836730421)]}
+{'asc': 2, 'sigma': 7.929251701306159e-07, 'top_flux_rel': [('pgi_f', -0.770858945471944), ('tpi_f', 0.313866217366405), ('tpi_b', 0.1520059232008355), ('fba_f', 0.06549177631954116), ('pgi_b', -0.022412073645398888), ('tal1_b', 0.02093977127064467), ('tal1_f', 0.02083531307180202), ('glyk_b', 0.015099955155415672)], 'top_logC': [('GAP', -0.35846227569513195), ('F6P', 0.2846600188691716), ('TA', -0.2009245364116684), ('DHAP', 0.15374431989822476), ('G6P', -0.02688823438943373), ('Gc', 0.025752554378812617), ('FBP', -0.017306292589407912), ('PG', -0.015577086154992533)]}
+{'asc': 3, 'sigma': 1.6468567081063377e-06, 'top_flux_rel': [('gpm_b', -0.06709870973839897), ('gpm_f', -0.06152953647929066), ('pgi_f', -0.04281385112855889), ('tpi_f', -0.012584957066447728), ('glyk_b', 0.010265562329845783), ('glyk_f', 0.010202165843198604), ('eno_b', 0.008959368734658557), ('pfk_f', 0.008254184425174668)], 'top_logC': [('PG', 0.7047441703481794), ('Gc', -0.6964867734780736), ('G2P', -0.06055927226761279), ('G3P', 0.05492231075671213), ('TA', -0.010466508864872052), ('Ga', 0.008187052376189125), ('S7P', 0.00800330046383093), ('F6P', 0.0058583265853319934)]}
+{'asc': 4, 'sigma': 2.8965152334820077e-06, 'top_flux_rel': [('gpm_b', -0.43350563384570323), ('gpm_f', -0.39734843577647827), ('tpi_f', -0.251214328936864), ('pgi_f', 0.11982226611249401), ('tpi_b', -0.1119203639476312), ('glyk_b', 0.08919434591306251), ('glyk_f', 0.08863977069550673), ('eno_b', 0.05907680878844985)], 'top_logC': [('G2P', -0.383043210255183), ('G3P', 0.34102693883563623), ('F6P', 0.3364238058583587), ('TA', -0.3133908180764059), ('GAP', -0.1289627256280568), ('DHAP', -0.1131350091161015), ('Gc', 0.08790666646403816), ('Ga', 0.06768381361581188)]}
+{'asc': 5, 'sigma': 3.7562450666870275e-06, 'top_flux_rel': [('pgi_f', -0.47003902600357983), ('gpm_b', -0.242248348539773), ('gpm_f', -0.22227193170264395), ('glyk_b', 0.09418446392982381), ('glyk_f', 0.0935918501011811), ('fba_f', 0.07443239788041735), ('tal1_b', -0.048742000523031855), ('tal1_f', -0.048431108717912966)], 'top_logC': [('F6P', -0.44349090552426906), ('TA', 0.4189434699479679), ('GAP', 0.39554601908241543), ('G2P', -0.2306767336570543), ('G3P', 0.18835648513075792), ('Ga', 0.09272945728897276), ('Gc', 0.06392141867813018), ('PG', -0.041739618175863406)]}
+{'asc': 6, 'sigma': 5.03220388736569e-06, 'top_flux_rel': [('tpi_f', -0.6513929739274597), ('pgi_f', -0.3637228784595812), ('tpi_b', -0.30288085710679774), ('gpm_b', 0.21708627871996877), ('gpm_f', 0.20058288204444574), ('tal2_f', 0.05109417037049311), ('tal2_b', 0.04824141856431689), ('gapdh_f', -0.03723848369222532)], 'top_logC': [('DHAP', -0.30766084623485956), ('GAP', 0.19652169347961296), ('G2P', 0.17196681928212063), ('F6P', 0.16826160733825907), ('TA', -0.14544454090624045), ('G3P', -0.1407600853555008), ('E4P', -0.05746885279041942), ('S7P', 0.05695822138014529)]}
+{'asc': 7, 'sigma': 1.3828254372952464e-05, 'top_flux_rel': [('fba_f', 0.48495317191332393), ('gapdh_f', 0.3939313026521415), ('glyk_b', -0.35331051896959714), ('glyk_f', -0.3506723502752975), ('pfk_f', 0.24021788121693655), ('tkt1_f', 0.2079863693036443), ('tal1_b', -0.13701511584026355), ('tal1_f', -0.13631353725587497)], 'top_logC': [('Ga', -0.3580340430457495), ('G3P', 0.14247725204650702), ('FBP', 0.10393094645556125), ('GAP', 0.09691990110986867), ('TA', -0.08617198473332267), ('TK', -0.06652096447142021), ('G2P', -0.05419575109908139), ('E4P', -0.036329236260363086)]}
+{'asc': 8, 'sigma': 1.9962512509767487e-05, 'top_flux_rel': [('fba_f', 0.6735695406823028), ('tkt1_f', -0.43344764024686), ('rpe_f', 0.2073590338295074), ('tal1_b', 0.1950918863825473), ('tal1_f', 0.19430702775478734), ('tkt1_b', -0.1192130238425354), ('tal2_f', -0.11358751885149987), ('tal2_b', -0.11200101264985186)], 'top_logC': [('E4P', 0.2207020002905124), ('S7P', -0.21405635237714674), ('TK', 0.13419163558260513), ('F6P', 0.12134683954965549), ('TA', 0.0913718162755067), ('X5P', -0.08240858110725521), ('FBP', -0.0747905948098688), ('Ru5P', -0.07261928456504207)]}
+=== END   Block 2B Synechocystis joint sensitivity | elapsed=13 s ===
+=== START Block 2C Synechocystis fast2 sweep | 2026-09-10T19:16:11Z ===
+fast2 1.0 weak [5.03220389e-06 3.75624507e-06 2.89651523e-06 1.64685671e-06
+ 7.92925170e-07 8.94194411e-16] sec 0.9029688835144043
+fast2 0.5 weak [4.48578270e-06 3.30433898e-06 2.23171163e-06 1.66216547e-06
+ 5.88156431e-07 2.90794724e-15] sec 0.895338773727417
+fast2 0.25 weak [4.00281631e-06 3.09942254e-06 1.73042424e-06 1.65970899e-06
+ 3.20966234e-07 3.06715364e-15] sec 0.9010491371154785
+fast2 0.125 weak [3.83794542e-06 2.75350370e-06 1.66447072e-06 1.18523205e-06
+ 1.58827102e-07 1.90978947e-15] sec 0.8992190361022949
+fast2 0.0625 weak [3.81334469e-06 2.60412931e-06 1.66333676e-06 6.66071125e-07
+ 7.80228233e-08 3.49787219e-15] sec 0.8993196487426758
+fast2 0.03125 weak [3.81303350e-06 2.56145953e-06 1.66277946e-06 3.43429747e-07
+ 3.85669764e-08 3.78697755e-15] sec 0.8993997573852539
+fast2 0.015625 weak [3.81555007e-06 2.54938780e-06 1.66249459e-06 1.72931224e-07
+ 1.91623061e-08 2.54246253e-15] sec 0.9074904918670654
+fast2 0.0078125 weak [3.81745153e-06 2.54573159e-06 1.66235042e-06 8.65822404e-08
+ 9.54970641e-09 2.61047254e-15] sec 0.8989078998565674
+fast2 0.00390625 weak [3.81856088e-06 2.54450437e-06 1.66227772e-06 4.32962629e-08
+ 4.76685252e-09 3.18153081e-15] sec 0.9049789905548096
+fast2 0.001953125 weak [3.81915557e-06 2.54404200e-06 1.66224157e-06 2.16464032e-08
+ 2.38142572e-09 1.38202055e-15] sec 0.9066214561462402
+
+BOTTOM FITS
+fast2
+partition  index_desc  sigma_exponent  fim_exponent   sigma_eps1  sigma_epsmin
+    fast2          46       -0.000358     -0.000716 1.054663e-04  1.078493e-04
+    fast2          47        0.000317      0.000634 9.211233e-05  8.859297e-05
+    fast2          48       -0.000719     -0.001439 7.016906e-05  7.471330e-05
+    fast2          49       -0.000926     -0.001852 6.152924e-05  5.315993e-05
+    fast2          50       -0.000748     -0.001496 5.403137e-05  4.676926e-05
+    fast2          51        0.001337      0.002675 4.238804e-05  4.434180e-05
+    fast2          52        0.000792      0.001584 3.924604e-05  3.278825e-05
+    fast2          53        0.000662      0.001324 1.996251e-05  1.709317e-05
+    fast2          54        0.000517      0.001035 1.382825e-05  1.336708e-05
+    fast2          55       -0.000451     -0.000901 5.032204e-06  3.819156e-06
+    fast2          56        0.000978      0.001956 3.756245e-06  2.544042e-06
+    fast2          57        0.000072      0.000144 2.896515e-06  1.662242e-06
+    fast2          58        0.999383      1.998765 1.646857e-06  2.164640e-08
+    fast2          59        1.002754      2.005508 7.929252e-07  2.381426e-09
+    fast2          60             NaN           NaN 8.941944e-16  1.382021e-15
+=== END   Block 2C Synechocystis fast2 sweep | elapsed=22 s ===
+=== START Block 2D Synechocystis fast3 sweep | 2026-09-10T19:16:33Z ===
+fast3 1.0 weak [5.03220389e-06 3.75624506e-06 2.89651524e-06 1.64685671e-06
+ 7.92925181e-07 1.35947819e-14] sec 0.9394700527191162
+fast3 0.5 weak [4.47988974e-06 3.30841844e-06 2.15723739e-06 1.66047487e-06
+ 5.81207663e-07 1.59378668e-14] sec 0.9385888576507568
+fast3 0.25 weak [4.05494501e-06 3.10864435e-06 1.66838338e-06 1.57414257e-06
+ 3.14218779e-07 1.82353302e-14] sec 0.9369792938232422
+fast3 0.125 weak [3.91815098e-06 2.82089681e-06 1.65373425e-06 9.98629250e-07
+ 1.54619041e-07 1.97136552e-14] sec 0.9393763542175293
+fast3 0.0625 weak [3.74537955e-06 2.52541483e-06 1.64498898e-06 5.39386209e-07
+ 7.56574796e-08 1.55575984e-14] sec 0.9382028579711914
+fast3 0.03125 weak [3.32439776e-06 1.83135398e-06 1.56759582e-06 2.75288120e-07
+ 3.73065350e-08 1.24595992e-14] sec 0.9408156871795654
+fast3 0.015625 weak [3.17132969e-06 1.68112617e-06 9.17949795e-07 1.38361119e-07
+ 1.85106393e-08 1.65501825e-14] sec 0.9384863376617432
+fast3 0.0078125 weak [3.13415963e-06 1.67384639e-06 4.68117176e-07 6.92704185e-08
+ 9.21826671e-09 1.79944562e-14] sec 0.9395236968994141
+fast3 0.00390625 weak [3.12339060e-06 1.67241852e-06 2.35134271e-07 3.46464030e-08
+ 4.59970509e-09 1.68581945e-14] sec 0.9382531642913818
+fast3 0.001953125 weak [3.11979380e-06 1.67206569e-06 1.17705266e-07 1.73245777e-08
+ 2.29744287e-09 1.95981533e-14] sec 0.9409580230712891
+
+BOTTOM FITS
+fast3
+partition  index_desc  sigma_exponent  fim_exponent   sigma_eps1  sigma_epsmin
+    fast3          46       -0.000105     -0.000210 1.054663e-04  1.025924e-04
+    fast3          47       -0.001231     -0.002463 9.211233e-05  7.675031e-05
+    fast3          48        0.000079      0.000159 7.016906e-05  7.271306e-05
+    fast3          49       -0.000673     -0.001346 6.152924e-05  5.076664e-05
+    fast3          50       -0.000366     -0.000731 5.403137e-05  4.370257e-05
+    fast3          51        0.001214      0.002428 4.238804e-05  3.578674e-05
+    fast3          52        0.001439      0.002878 3.924604e-05  1.845160e-05
+    fast3          53        0.002705      0.005410 1.996251e-05  1.252474e-05
+    fast3          54        0.002854      0.005709 1.382825e-05  4.238785e-06
+    fast3          55        0.007588      0.015175 5.032204e-06  3.119794e-06
+    fast3          56        0.002462      0.004924 3.756245e-06  1.672066e-06
+    fast3          57        0.988309      1.976619 2.896515e-06  1.177053e-07
+    fast3          58        0.999217      1.998435 1.646857e-06  1.732458e-08
+    fast3          59        1.003372      2.006743 7.929252e-07  2.297443e-09
+    fast3          60             NaN           NaN 1.359478e-14  1.959815e-14
+=== END   Block 2D Synechocystis fast3 sweep | elapsed=21 s ===
+=== START Block 2E Synechocystis design lifting | 2026-09-10T19:16:54Z ===
+eps 1.0 weak {'baseline': [3.756245066669276e-06, 2.8965152333863904e-06, 1.6468567080492928e-06, 7.929251700154661e-07], '+F6P': [4.93623344393047e-06, 3.2607329893520075e-06, 1.6610912247480989e-06, 1.637462481497711e-06], '+GAP': [4.862419914875052e-06, 3.0390298998050936e-06, 2.354552562909804e-06, 1.6466358261353294e-06], '+F6P+GAP': [1.3373686306499023e-05, 3.5010996194187547e-06, 2.5636872062472897e-06, 1.6482138597976223e-06]}
+eps 0.5 weak {'baseline': [3.3043389827329863e-06, 2.231711629070559e-06, 1.6621654730782497e-06, 5.881564307197597e-07], '+F6P': [4.2613149896231005e-06, 3.3036653001537104e-06, 1.6652868241813136e-06, 1.5760459200374799e-06], '+GAP': [4.207151356995036e-06, 3.080231775959385e-06, 2.152580638177584e-06, 1.6621588936042591e-06], '+F6P+GAP': [1.3551854380520447e-05, 3.6559589347196592e-06, 2.5875913444994004e-06, 1.663226208402512e-06]}
+eps 0.25 weak {'baseline': [3.099422540981025e-06, 1.7304242388388155e-06, 1.6597089859389865e-06, 3.2096623441125296e-07], '+F6P': [3.87265339201477e-06, 3.0057460983406974e-06, 1.6653052571696377e-06, 1.296851500730606e-06], '+GAP': [3.867478475346127e-06, 2.804021323982899e-06, 1.6833610415988073e-06, 1.6461597091737077e-06], '+F6P+GAP': [1.3538880057276314e-05, 3.7378693827563127e-06, 2.5748822469729917e-06, 1.6647813472048123e-06]}
+eps 0.125 weak {'baseline': [2.7535037045412916e-06, 1.6644707179592651e-06, 1.1852320460057085e-06, 1.5882710181517389e-07], '+F6P': [3.8076529979134145e-06, 2.6960564604632677e-06, 1.6641670043016314e-06, 8.327522323308528e-07], '+GAP': [3.8085548475251406e-06, 2.6255963825781446e-06, 1.6642677059091814e-06, 9.941869698690122e-07], '+F6P+GAP': [1.3476004182958146e-05, 3.7789724157152263e-06, 2.5615125440865762e-06, 1.6640146408887902e-06]}
+eps 0.0625 weak {'baseline': [2.604129314253044e-06, 1.6633367603185805e-06, 6.660711244642977e-07, 7.802282327479692e-08], '+F6P': [3.8062324629784208e-06, 2.587931352323426e-06, 1.6632827835400605e-06, 4.5030281451987525e-07], '+GAP': [3.8066069426553592e-06, 2.569902548528545e-06, 1.6632934077459713e-06, 5.212062042317271e-07], '+F6P+GAP': [1.3426824767281694e-05, 3.7994307510803494e-06, 2.5531284192383212e-06, 1.6632408319724055e-06]}
+eps 0.03125 weak {'baseline': [2.56145953012277e-06, 1.6627794565159057e-06, 3.4342974676127264e-07, 3.856697638558337e-08], '+F6P': [3.8112894379170317e-06, 2.55728202387419e-06, 1.6627667979203779e-06, 2.2971375328303732e-07], '+GAP': [3.811396293256308e-06, 2.552843904720708e-06, 1.6627685391827479e-06, 2.6322382484129123e-07], '+F6P+GAP': [1.3397496910818458e-05, 3.8096198370303418e-06, 2.5485330714214447e-06, 1.6627557598244779e-06]}
+eps 0.015625 weak {'baseline': [2.5493878039563934e-06, 1.66249458588347e-06, 1.7293122409284833e-07, 1.91623060613366e-08], '+F6P': [3.815116661287311e-06, 2.548327352895978e-06, 1.6624914540609634e-06, 1.1540130471090511e-07], '+GAP': [3.815144802104594e-06, 2.5472325458294254e-06, 1.6624918114391373e-06, 1.3177912133910813e-07], '+F6P+GAP': [1.338162586156417e-05, 3.814702317121815e-06, 2.54613825889659e-06, 1.6624886221181172e-06]}
+eps 0.0078125 weak {'baseline': [2.5457315878045805e-06, 1.66235042121636e-06, 8.658224037448147e-08, 9.549706406942105e-09], '+F6P': [3.817343408460158e-06, 2.5454643411469396e-06, 1.6623496384538212e-06, 5.775855612013724e-08], '+GAP': [3.817350611028266e-06, 2.5451928297421427e-06, 1.6623497200302879e-06, 6.586760340677518e-08], '+F6P+GAP': [1.3373386836873595e-05, 3.817240160150477e-06, 2.544917060975348e-06, 1.6623489211601103e-06]}
+eps 0.00390625 weak {'baseline': [2.544504369667746e-06, 1.6622777223228636e-06, 4.329626282906091e-08, 4.766852522828955e-09], '+F6P': [3.8185338680237216e-06, 2.54443728195388e-06, 1.6622775264084532e-06, 2.8883834260817587e-08], '+GAP': [3.81853568899314e-06, 2.5443696992358847e-06, 1.6622775459545326e-06, 3.292019366275944e-08], '+F6P+GAP': [1.3369191534083909e-05, 3.818508095460916e-06, 2.5443004747593677e-06, 1.6622773458963212e-06]}
+eps 0.001953125 weak {'baseline': [2.5440419976466613e-06, 1.6622415708190878e-06, 2.1646403206191004e-08, 2.3814257177418e-09], '+F6P': [3.819148818743051e-06, 2.5440251906254934e-06, 1.662241521798576e-06, 1.4441853719660782e-08], '+GAP': [3.819149276493751e-06, 2.544008333001917e-06, 1.6622415265917347e-06, 1.6455653072327916e-08], '+F6P+GAP': [1.336707478406185e-05, 3.819142380459572e-06, 2.5439909911186445e-06, 1.6622414765267548e-06]}
+
+ baseline
+  design  index_desc  sigma_exponent  fim_exponent   sigma_eps1  sigma_epsmin
+baseline          52        0.000792      0.001584 3.924604e-05  3.278825e-05
+baseline          53        0.000662      0.001324 1.996251e-05  1.709317e-05
+baseline          54        0.000517      0.001035 1.382825e-05  1.336708e-05
+baseline          55       -0.000451     -0.000901 5.032204e-06  3.819156e-06
+baseline          56        0.000978      0.001956 3.756245e-06  2.544042e-06
+baseline          57        0.000072      0.000144 2.896515e-06  1.662242e-06
+baseline          58        0.999383      1.998765 1.646857e-06  2.164640e-08
+baseline          59        1.002754      2.005508 7.929252e-07  2.381426e-09
+
+ +F6P
+design  index_desc  sigma_exponent  fim_exponent  sigma_eps1  sigma_epsmin
+  +F6P          52        0.001337      0.002674    0.000042  4.434180e-05
+  +F6P          53        0.000757      0.001515    0.000038  3.278821e-05
+  +F6P          54        0.000591      0.001182    0.000020  1.709313e-05
+  +F6P          55        0.000516      0.001033    0.000014  1.336707e-05
+  +F6P          56       -0.000502     -0.001004    0.000005  3.819149e-06
+  +F6P          57        0.000790      0.001579    0.000003  2.544025e-06
+  +F6P          58        0.000071      0.000143    0.000002  1.662242e-06
+  +F6P          59        0.999477      1.998953    0.000002  1.444185e-08
+
+ +GAP
+design  index_desc  sigma_exponent  fim_exponent  sigma_eps1  sigma_epsmin
+  +GAP          52        0.001332      0.002664    0.000042  4.434179e-05
+  +GAP          53        0.000773      0.001547    0.000039  3.278823e-05
+  +GAP          54        0.000597      0.001194    0.000020  1.709313e-05
+  +GAP          55        0.000517      0.001035    0.000014  1.336708e-05
+  +GAP          56       -0.000499     -0.000998    0.000005  3.819149e-06
+  +GAP          57        0.000595      0.001190    0.000003  2.544008e-06
+  +GAP          58        0.000071      0.000143    0.000002  1.662242e-06
+  +GAP          59        1.000500      2.000999    0.000002  1.645565e-08
+
+ +F6P+GAP
+  design  index_desc  sigma_exponent  fim_exponent  sigma_eps1  sigma_epsmin
++F6P+GAP          52       -0.000901     -0.001802    0.000044      0.000047
++F6P+GAP          53        0.001332      0.002664    0.000041      0.000044
++F6P+GAP          54        0.000738      0.001476    0.000035      0.000033
++F6P+GAP          55        0.000524      0.001048    0.000019      0.000017
++F6P+GAP          56        0.000516      0.001032    0.000013      0.000013
++F6P+GAP          57       -0.000551     -0.001103    0.000004      0.000004
++F6P+GAP          58        0.000400      0.000800    0.000003      0.000003
++F6P+GAP          59        0.000071      0.000141    0.000002      0.000002
+=== END   Block 2E Synechocystis design lifting | elapsed=21 s ===
+=== START Block 3A partition sweeps | 2026-09-10T19:17:15Z ===
+auto_fast1_raw eps=1 finite_y=True finite_J=True
+auto_fast1_raw eps=0.5 finite_y=True finite_J=True
+auto_fast1_raw eps=0.25 finite_y=True finite_J=True
+auto_fast1_raw eps=0.125 finite_y=True finite_J=True
+auto_fast1_raw eps=0.0625 finite_y=True finite_J=True
+auto_fast1_raw eps=0.03125 finite_y=True finite_J=True
+auto_fast1_raw eps=0.015625 finite_y=True finite_J=True
+auto_fast1_raw eps=0.0078125 finite_y=True finite_J=True
+auto_fast1_raw eps=0.00390625 finite_y=True finite_J=True
+auto_fast1_raw eps=0.001953125 finite_y=True finite_J=True
+auto_fast1_raw m1= 1 m2= 0 other= 0 seconds= 9.398415327072144
+auto_primary_phys eps=1 finite_y=True finite_J=True
+auto_primary_phys eps=0.5 finite_y=True finite_J=True
+auto_primary_phys eps=0.25 finite_y=True finite_J=True
+auto_primary_phys eps=0.125 finite_y=True finite_J=True
+auto_primary_phys eps=0.0625 finite_y=True finite_J=True
+auto_primary_phys eps=0.03125 finite_y=True finite_J=True
+auto_primary_phys eps=0.015625 finite_y=True finite_J=True
+auto_primary_phys eps=0.0078125 finite_y=True finite_J=True
+auto_primary_phys eps=0.00390625 finite_y=True finite_J=True
+auto_primary_phys eps=0.001953125 finite_y=True finite_J=True
+auto_primary_phys m1= 2 m2= 0 other= 0 seconds= 9.400290489196777
+auto_primary_raw eps=1 finite_y=True finite_J=True
+auto_primary_raw eps=0.5 finite_y=True finite_J=True
+auto_primary_raw eps=0.25 finite_y=True finite_J=True
+auto_primary_raw eps=0.125 finite_y=True finite_J=True
+auto_primary_raw eps=0.0625 finite_y=True finite_J=True
+auto_primary_raw eps=0.03125 finite_y=True finite_J=True
+auto_primary_raw eps=0.015625 finite_y=True finite_J=True
+auto_primary_raw eps=0.0078125 finite_y=True finite_J=True
+auto_primary_raw eps=0.00390625 finite_y=True finite_J=True
+auto_primary_raw eps=0.001953125 finite_y=True finite_J=True
+auto_primary_raw m1= 3 m2= 0 other= 0 seconds= 9.43424677848816
+primary_plus1_phys eps=1 finite_y=True finite_J=True
+primary_plus1_phys eps=0.5 finite_y=True finite_J=True
+primary_plus1_phys eps=0.25 finite_y=True finite_J=True
+primary_plus1_phys eps=0.125 finite_y=True finite_J=True
+primary_plus1_phys eps=0.0625 finite_y=True finite_J=True
+primary_plus1_phys eps=0.03125 finite_y=True finite_J=True
+primary_plus1_phys eps=0.015625 finite_y=True finite_J=True
+primary_plus1_phys eps=0.0078125 finite_y=True finite_J=True
+primary_plus1_phys eps=0.00390625 finite_y=True finite_J=True
+primary_plus1_phys eps=0.001953125 finite_y=True finite_J=True
+primary_plus1_phys m1= 3 m2= 0 other= 0 seconds= 9.417040348052979
+primary_plus1_raw eps=1 finite_y=True finite_J=True
+primary_plus1_raw eps=0.5 finite_y=True finite_J=True
+primary_plus1_raw eps=0.25 finite_y=True finite_J=True
+primary_plus1_raw eps=0.125 finite_y=True finite_J=True
+primary_plus1_raw eps=0.0625 finite_y=True finite_J=True
+primary_plus1_raw eps=0.03125 finite_y=True finite_J=True
+primary_plus1_raw eps=0.015625 finite_y=True finite_J=True
+primary_plus1_raw eps=0.0078125 finite_y=True finite_J=True
+primary_plus1_raw eps=0.00390625 finite_y=True finite_J=True
+primary_plus1_raw eps=0.001953125 finite_y=True finite_J=True
+primary_plus1_raw m1= 4 m2= 0 other= 0 seconds= 9.421780109405518
+auto_secondary_phys eps=1 finite_y=True finite_J=True
+auto_secondary_phys eps=0.5 finite_y=True finite_J=True
+auto_secondary_phys eps=0.25 finite_y=True finite_J=True
+auto_secondary_phys eps=0.125 finite_y=True finite_J=True
+auto_secondary_phys eps=0.0625 finite_y=True finite_J=True
+auto_secondary_phys eps=0.03125 finite_y=True finite_J=True
+auto_secondary_phys eps=0.015625 finite_y=True finite_J=True
+auto_secondary_phys eps=0.0078125 finite_y=True finite_J=True
+auto_secondary_phys eps=0.00390625 finite_y=True finite_J=True
+auto_secondary_phys eps=0.001953125 finite_y=True finite_J=True
+auto_secondary_phys m1= 5 m2= 0 other= 4 seconds= 9.474873065948486
+auto_secondary_raw eps=1 finite_y=True finite_J=True
+auto_secondary_raw eps=0.5 finite_y=True finite_J=True
+auto_secondary_raw eps=0.25 finite_y=True finite_J=True
+auto_secondary_raw eps=0.125 finite_y=True finite_J=True
+auto_secondary_raw eps=0.0625 finite_y=True finite_J=True
+auto_secondary_raw eps=0.03125 finite_y=True finite_J=True
+auto_secondary_raw eps=0.015625 finite_y=True finite_J=True
+auto_secondary_raw eps=0.0078125 finite_y=True finite_J=True
+auto_secondary_raw eps=0.00390625 finite_y=True finite_J=True
+auto_secondary_raw eps=0.001953125 finite_y=True finite_J=True
+auto_secondary_raw m1= 7 m2= 0 other= 2 seconds= 9.477517366409302
+Run finalize_block3.py next to regenerate combined diagnostics and summaries.
+=== END   Block 3A partition sweeps | elapsed=78 s ===
+=== START Block 3B partition diagnostics | 2026-09-10T19:18:33Z ===
+          partition                 fast_pools  n_fast  m0_count  m1_count                                                   m1_exponents  m2_count  other_count  structural_count  pool_gap_ratio  emu_fast_min_decay  emu_to_slow_turnover_ratio  output_convergence_order  output_last_relative_delta  angle_to_primary_phys_max_deg      classification
+     auto_fast1_raw                        GAP       1        58         1                                                       0.999520         0            0                 1        1.053618           25.740060                    1.053618                  0.999603                    0.000027                   2.360142e-01    quantized-stable
+  auto_primary_phys                    F6P,GAP       2        57         2                                              0.999381;1.002760         0            0                 1        0.977063            3.391404                    0.138820                  0.998936                    0.000080                   1.667915e-14    quantized-stable
+   auto_primary_raw                 F6P,TA,GAP       3        56         3                                     0.988309;0.999217;1.003372         0            0                 1        3.677789            2.755047                    0.424490                  0.998625                    0.000107                   1.291961e+00    quantized-stable
+ primary_plus1_phys                G3P,F6P,GAP       3        56         3                                     0.999599;0.998760;1.002299         0            0                 1        0.265666            3.143859                    0.128688                  0.998272                    0.000143                   1.007385e-01    quantized-stable
+  primary_plus1_raw             G3P,F6P,TA,GAP       4        55         4                            0.987672;0.999609;0.997991;1.003509         0            0                 1        1.405628            2.755047                    0.596675                  0.997983                    0.000173                   1.237409e+00    quantized-stable
+auto_secondary_phys    G2P,S7P,E4P,G3P,F6P,GAP       6        50         5                   0.990065;0.999025;0.999847;0.998270;1.001237         0            4                 1        0.126946            0.739500                    0.030270                  0.996199                    0.000392                   5.625396e+00 broad-cut/crossover
+ auto_secondary_raw G2P,S7P,E4P,G3P,F6P,TA,GAP       7        50         7 0.782093;0.896115;0.993380;0.996735;1.002302;0.999714;1.004881         0            2                 1        1.237203            0.422911                    0.168711                  0.996036                    0.000434                   3.552958e+00 broad-cut/crossover
+
+angles
+          partition  m1_dim  compared_dim  min_angle_deg  max_angle_deg
+auto_secondary_phys       5             2   8.578427e-01   5.625396e+00
+ auto_secondary_raw       7             2   6.680339e-01   3.552958e+00
+   auto_primary_raw       3             2   1.589340e-02   1.291961e+00
+  primary_plus1_raw       4             2   4.609086e-02   1.237409e+00
+ primary_plus1_phys       3             2   5.898773e-03   1.007385e-01
+     auto_fast1_raw       1             1   2.360142e-01   2.360142e-01
+  auto_primary_phys       2             2   2.495497e-15   1.667915e-14
+
+toy candidates
+cut_after  gap_log10    ratio  fast_size  fast_pools
+      Glu   0.522879 3.333333          3 AKG,Fum,OAA
+      Fum   0.447158 2.800000          1         OAA
+=== END   Block 3B partition diagnostics | elapsed=12 s ===
+=== START Block 4A toy finite-noise | 2026-09-10T19:18:45Z ===
+{
+  "noise_model": {
+    "delta": 0.0001,
+    "sigma_ilr": 0.08,
+    "sigma_log_pool": 0.1,
+    "seed": 20260905
+  },
+  "q1": {
+    "log v3": -0.05644172747016289,
+    "log v4": -0.08433553685631355,
+    "log v6b": -0.16630208106248281,
+    "log C_OAA": 0.3137051307053632,
+    "log C_Cit": -0.07596512302491755,
+    "log C_AKG": -0.5975417262137753,
+    "log C_Suc": -0.19719829351253212,
+    "log C_Fum": 0.6425200911163903,
+    "log C_Glu": 0.22155926631843037
+  },
+  "q2": {
+    "log v3": -0.029721409215095126,
+    "log v4": -0.03525716874764413,
+    "log v6b": 0.5152322872424933,
+    "log C_OAA": -0.7288411949940642,
+    "log C_Cit": -0.0326327083942558,
+    "log C_AKG": -0.029959430448462027,
+    "log C_Suc": -0.06793614934249968,
+    "log C_Fum": 0.4400723586967572,
+    "log C_Glu": -0.03095658479722918
+  },
+  "local": [
+    {
+      "design": "baseline",
+      "identifiable_dim": 7,
+      "sigma_min": 0.09378294707504052,
+      "sigma_second_min": 0.9193490974219686,
+      "se_q1": 1.0877260909968491,
+      "se_q2": 10.66291933867189
+    },
+    {
+      "design": "fum",
+      "identifiable_dim": 8,
+      "sigma_min": 1.0220688868217214,
+      "sigma_second_min": 1.0459941059586857,
+      "se_q1": 0.9625280882825855,
+      "se_q2": 0.7534234591832547
+    },
+    {
+      "design": "asp",
+      "identifiable_dim": 8,
+      "sigma_min": 3.314999893744522,
+      "sigma_second_min": 4.795942550664646,
+      "se_q1": 0.2041054077301427,
+      "se_q2": 0.16822245294829488
+    },
+    {
+      "design": "pool",
+      "identifiable_dim": 9,
+      "sigma_min": 1.2023454477477524,
+      "sigma_second_min": 4.781262260806832,
+      "se_q1": 0.2041054076508484,
+      "se_q2": 0.1682224529693666
+    }
+  ],
+  "profile_intervals": [
+    {
+      "design": "baseline",
+      "profile95_lo": null,
+      "profile95_hi": null,
+      "profile95_width": null
+    },
+    {
+      "design": "fum",
+      "profile95_lo": -1.3214671741612196,
+      "profile95_hi": null,
+      "profile95_width": null
+    },
+    {
+      "design": "asp",
+      "profile95_lo": -0.38927211439687515,
+      "profile95_hi": 0.21049947969334093,
+      "profile95_width": 0.5997715940902161
+    },
+    {
+      "design": "pool",
+      "profile95_lo": -0.38927211496093733,
+      "profile95_hi": 0.2104994794055096,
+      "profile95_width": 0.5997715943664469
+    }
+  ]
+}
+=== END   Block 4A toy finite-noise | elapsed=660 s ===
+=== START Block 4B toy profiles | 2026-09-10T19:29:45Z ===
+baseline min (-1.0, 46.94914369196517) end (-1.5, 46.95873451687929) (1.5, 47.115211364476025)
+fum min (-0.5, 58.88220630166763) end (-1.5, 63.208310638744464) (1.5, 65.08846694660687)
+asp min (0.0, 129.46133294317687) end (-1.5, 206.22197689419278) (1.5, 240.7119680777148)
+     design      lo95      hi95   width95
+0  baseline       NaN       NaN       NaN
+1       fum -1.433365  0.903198  2.336563
+2       asp -0.334641  0.295378  0.630019
+=== END   Block 4B toy profiles | elapsed=11 s ===
+=== START Block 4C Synechocystis finite-noise | 2026-09-10T19:29:56Z ===
+eps 1.0 compute sec 0.9065792560577393
+eps 0.25 compute sec 0.8955893516540527
+eps 0.0625 compute sec 0.9058723449707031
+eps 0.015625 compute sec 0.9017691612243652
+
+LOCAL EPS=1/64
+  design   largest_sd  second_largest_sd  sigma_min  sigma_second_min
+baseline 33851.918662        3254.641084   0.000005          0.000030
+     F6P 47493.684523        3254.815842   0.000021          0.000307
+     GAP 46295.728629        3255.285985   0.000022          0.000307
+    both  3255.472736        2683.331547   0.000307          0.000373
+
+MC
+  design pool     rmse_logC           q025          q975
+baseline  F6P 144928.440057 -273240.717351 288037.834551
+baseline  GAP 149020.527165 -294616.516733 292875.673115
+     F6P  F6P      0.100906      -0.200823      0.199941
+     F6P  GAP  47668.417230  -97033.375310  90832.857146
+     GAP  F6P  45053.328842  -86636.989001  90566.773499
+     GAP  GAP      0.099584      -0.196200      0.192494
+    both  F6P      0.100732      -0.202195      0.192367
+    both  GAP      0.099562      -0.194776      0.196592
+
+PROFILE
+  design  lo95  hi95  width95
+baseline   NaN   NaN      NaN
+     F6P   NaN   NaN      NaN
+     GAP   NaN   NaN      NaN
+    both   NaN   NaN      NaN
+
+BOTTOM EXPONENTS
+baseline
+  design  index_desc  sigma_exponent  uncertainty_sd_exponent
+baseline          55        0.104839                -0.104839
+baseline          56        0.033392                -0.033392
+baseline          57        0.010751                -0.010751
+baseline          58        0.755480                -0.755480
+baseline          59        1.026263                -1.026263
+F6P
+design  index_desc  sigma_exponent  uncertainty_sd_exponent
+   F6P          55        0.004070                -0.004070
+   F6P          56        0.078390                -0.078390
+   F6P          57        0.032793                -0.032793
+   F6P          58        0.010751                -0.010751
+   F6P          59        0.812574                -0.812574
+GAP
+design  index_desc  sigma_exponent  uncertainty_sd_exponent
+   GAP          55       -0.003990                 0.003990
+   GAP          56        0.055087                -0.055087
+   GAP          57        0.024337                -0.024337
+   GAP          58        0.006643                -0.006643
+   GAP          59        0.859834                -0.859834
+both
+design  index_desc  sigma_exponent  uncertainty_sd_exponent
+  both          55        0.004933                -0.004933
+  both          56       -0.017877                 0.017877
+  both          57       -0.002687                 0.002687
+  both          58        0.006899                -0.006899
+  both          59        0.004573                -0.004573
+=== END   Block 4C Synechocystis finite-noise | elapsed=18 s ===
+=== START Block 4D Synechocystis pool-contrast profiles | 2026-09-10T19:30:14Z ===
+  design      lo95    hi95  width95  max_delta_chi2
+baseline       NaN     NaN      NaN        0.001449
+     F6P       NaN     NaN      NaN        0.001323
+     GAP       NaN     NaN      NaN        0.001182
+    both -0.193839 0.18583  0.37967      226.265017
+
+ baseline
+ a_contrast  delta_chi2
+      -1.50    0.001128
+      -1.00    0.001373
+      -0.75    0.001431
+      -0.50    0.001449
+      -0.35    0.001439
+      -0.25    0.001425
+      -0.15    0.001405
+      -0.08    0.001386
+       0.00    0.001361
+       0.08    0.001332
+       0.15    0.001303
+       0.25    0.001255
+       0.35    0.001201
+       0.50    0.001105
+       0.75    0.000908
+       1.00    0.000661
+       1.50    0.000000
+
+ F6P
+ a_contrast  delta_chi2
+      -1.50    0.001041
+      -1.00    0.001261
+      -0.75    0.001311
+      -0.50    0.001323
+      -0.35    0.001311
+      -0.25    0.001296
+      -0.15    0.001274
+      -0.08    0.001256
+       0.00    0.001231
+       0.08    0.001202
+       0.15    0.001173
+       0.25    0.001127
+       0.35    0.001074
+       0.50    0.000983
+       0.75    0.000798
+       1.00    0.000573
+       1.50    0.000000
+
+ GAP
+ a_contrast  delta_chi2
+      -1.50    0.000830
+      -1.00    0.001085
+      -0.75    0.001153
+      -0.50    0.001182
+      -0.35    0.001181
+      -0.25    0.001173
+      -0.15    0.001158
+      -0.08    0.001145
+       0.00    0.001125
+       0.08    0.001102
+       0.15    0.001078
+       0.25    0.001039
+       0.35    0.000993
+       0.50    0.000912
+       0.75    0.000746
+       1.00    0.000537
+       1.50    0.000000
+
+ both
+ a_contrast  delta_chi2
+      -1.50  223.733563
+      -1.00   99.155866
+      -0.75   55.616957
+      -0.50   24.578010
+      -0.35   11.954623
+      -0.25    6.039024
+      -0.15    2.123419
+      -0.08    0.572492
+       0.00    0.000000
+       0.08    0.707504
+       0.15    2.376567
+       0.25    6.460937
+       0.35   12.545301
+       0.50   25.421835
+       0.75   56.882691
+       1.00  100.843507
+       1.50  226.265017
+=== END   Block 4D Synechocystis pool-contrast profiles | elapsed=15 s ===
+=== START Figure 7 refresh (Python only) | 2026-09-10T19:30:29Z ===
+=== END   Figure 7 refresh (Python only) | elapsed=4 s ===
+FULL_SCIENTIFIC_REPRODUCTION_COMPLETED

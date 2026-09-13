@@ -1,0 +1,8 @@
+Official PyPI release artifact checked for FreeFlux 0.3.8:
+
+freeflux-0.3.8-py3-none-any.whl
+SHA256: 0c907487b38178599aa953ea1fbb293eeaaa4196077dd2701a2a46ac8050c6a8
+Upload date: 2026-03-18
+
+Verify after download with:
+  sha256sum freeflux-0.3.8-py3-none-any.whl

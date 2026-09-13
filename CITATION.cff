@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code-and-data release, please cite the archived Zenodo release and the associated article."
+title: "Asymptotic identifiability orders: reproducibility code and data"
+type: software
+authors:
+  - family-names: Villatoro
+    given-names: Francisco R.
+    affiliation: "Universidad de Málaga"
+version: "1.0.0"
+date-released: 2026-09-13
+repository-code: "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa"
+license: GPL-3.0-only

@@ -1,0 +1,15 @@
+# Licensing
+
+Original source code in this repository is licensed under the
+GNU General Public License v3.0 only (GPL-3.0-only).
+
+Original data, documentation, and scientific figures produced for this
+reproducibility release are licensed under the Creative Commons
+Attribution 4.0 International license (CC-BY-4.0).
+
+Third-party and derived material remains subject to its upstream license.
+In particular, FreeFlux-derived compatibility code retains its GPLv3
+provenance. See THIRD_PARTY_NOTICES.md and the license notices in the
+corresponding validation directories.
+
+Full license texts are provided under LICENSES/.

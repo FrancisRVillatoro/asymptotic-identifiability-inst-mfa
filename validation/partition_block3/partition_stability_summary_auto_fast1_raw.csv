@@ -1,0 +1,2 @@
+partition,fast_pools,n_fast,m0_count,m1_count,m1_exponents,m2_count,other_count,structural_count,pool_gap_ratio,emu_fast_min_decay,emu_to_slow_turnover_ratio,output_convergence_order,output_last_relative_delta,angle_to_primary_phys_max_deg,elapsed_seconds
+auto_fast1_raw,GAP,1,58,1,0.999517,0,0,1,1.0536182118180455,13178.910825901476,539.4525244508392,0.9995754920283574,2.6836456956809677e-05,,17.011260986328125

@@ -1,0 +1,19 @@
+phase=scientific_compute
+full_run_stamp_utc=20260910T191415Z
+start_utc=2026-09-10T19:14:15Z
+host=sd064
+pwd=/mnt2/fscratch/users/tic_118_uma/frv/main_v6_reproducible
+uname=Linux sd064 6.4.0-150600.23.87-default #1 SMP PREEMPT_DYNAMIC Tue Feb  3 14:58:48 UTC 2026 (0f213a3) x86_64 x86_64 x86_64 GNU/Linux
+shell=4.4.23(1)-release
+python=/mnt/home/soft/anaconda/programs/x86_64/anaconda3-2022.10/bin/python
+Python 3.9.13
+numpy=1.24.4
+scipy=1.9.1
+pandas=1.4.4
+matplotlib=3.5.2
+openpyxl=3.0.10
+sympy=1.10.1
+pdflatex_compute_node=NOT_AVAILABLE
+OMP_NUM_THREADS=1
+OPENBLAS_NUM_THREADS=1
+MKL_NUM_THREADS=1

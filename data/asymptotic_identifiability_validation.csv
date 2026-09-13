@@ -1,0 +1,11 @@
+case,expected_singular_orders,predicted_singular_orders,predicted_fim_exponents,observed_fim_exponents,status
+Guppy reversible KFP,"0,0,0,1,2","0,0,0,1,2","0,0,0,2,4","-0.000,-0.000,0.000,2.001,4.001",PASS
+"Minimal EMU, one tracer","0,0,0,1,structural","0,0,0,1,structural","0,0,0,2,structural","-0.000,-0.000,-0.000,2.002,structural",PASS
+"Minimal EMU, two tracers","0,0,0,0,1","0,0,0,0,1","0,0,0,0,2","-0.000,-0.000,-0.000,-0.000,2.002",PASS
+"Condensation EMU, A+B","0,0,0,1","0,0,0,1","0,0,0,2","-0.000,-0.000,-0.000,2.003",PASS
+"Two-stage cascade, Y only","1,2","1,2","2,4","2.003,4.003",PASS
+"Two-stage cascade, X+Y","1,1","1,1","2,2","2.003,2.002",PASS
+"Reversible exchange, one input/Z","0,1,2","0,1,2","0,2,4","-0.000,2.000,4.005",PASS
+"Reversible exchange, two inputs/Z","0,0,1","0,0,1","0,0,2","-0.000,-0.000,2.000",PASS
+"Reversible exchange, one input/XYZ","0,1,1","0,1,1","0,2,2","-0.000,2.001,2.001",PASS
+Guppy direction audit,q_fast@1;q_d@2,alignment=1.000000000;1.000000000,2;4,,PASS

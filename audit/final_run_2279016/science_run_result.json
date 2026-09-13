@@ -1,0 +1,11 @@
+{
+  "phase": "scientific_compute",
+  "stamp_utc": "20260910T191415Z",
+  "run_dir": "audit/full_runs/20260910T191415Z",
+  "exit_code": 0,
+  "completion_marker_found": true,
+  "end_utc": "2026-09-10T19:30:33Z",
+  "stdout_sha256": "039690dc1e07b3a0a1ce2defd716864df61e920e516c101b9d0ae2e6f9e7895b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs_after_science_sha256_file_sha256": "b883e433dd524ed0c3ac27b378de2a0c3f67f990f6323fc7a65d4f0df43f5c43"
+}
