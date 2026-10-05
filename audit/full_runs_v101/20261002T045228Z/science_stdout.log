@@ -1,0 +1,466 @@
+=== START v1.0.1 candidate preflight | 2026-10-02T04:52:29Z ===
+ROOT /mnt/fscratch/users/tic_118_uma/frv/asymptotic-identifiability-inst-mfa-v101-rc1-clean
+GIT_HEAD 9c886060635688f97c7129402d787fac65602ae9
+V101_PREFLIGHT=PASS
+=== END   v1.0.1 candidate preflight | rc=0 elapsed=0 s ===
+=== START Inherited v1.0.0 canonical-data hash check | 2026-10-02T04:52:29Z ===
+data/asymptotic_identifiability_validation.csv OK
+data/freeflux_design_lifting.csv OK
+data/freeflux_spectrum_extended.csv OK
+data/full9_final_scaling.csv OK
+data/phaseI_guppy_fim_spectrum.csv OK
+INHERITED_V100_HASH_CHECK=PASS
+=== END   Inherited v1.0.0 canonical-data hash check | rc=0 elapsed=1 s ===
+=== START Synthetic validation regeneration | 2026-10-02T04:52:30Z ===
+ALL_PASS = True
+Guppy fast-direction alignment = 1.0
+Guppy degenerate-direction alignment = 1.0
+PASS | Guppy reversible KFP | predicted: 0,0,0,1,2 | observed FIM: -0.000,-0.000,0.000,2.001,4.001
+PASS | Minimal EMU, one tracer | predicted: 0,0,0,1,structural | observed FIM: -0.000,-0.000,-0.000,2.002,structural
+PASS | Minimal EMU, two tracers | predicted: 0,0,0,0,1 | observed FIM: -0.000,-0.000,-0.000,-0.000,2.002
+PASS | Condensation EMU, A+B | predicted: 0,0,0,1 | observed FIM: -0.000,-0.000,-0.000,2.003
+PASS | Two-stage cascade, Y only | predicted: 1,2 | observed FIM: 2.003,4.003
+PASS | Two-stage cascade, X+Y | predicted: 1,1 | observed FIM: 2.003,2.002
+PASS | Reversible exchange, one input/Z | predicted: 0,1,2 | observed FIM: -0.000,2.000,4.005
+PASS | Reversible exchange, two inputs/Z | predicted: 0,0,1 | observed FIM: -0.000,-0.000,2.000
+PASS | Reversible exchange, one input/XYZ | predicted: 0,1,1 | observed FIM: -0.000,2.001,2.001
+PASS | Guppy direction audit | predicted: alignment=1.000000000;1.000000000 | observed FIM: 
+=== END   Synthetic validation regeneration | rc=0 elapsed=7 s ===
+=== START FreeFlux v1.0.0 source-faithful runtime cross-check | 2026-10-02T04:52:37Z ===
+official 6 0.004583549773031936 0.0007834498695758882 0.002118305402076938 0.04643964767456055
+h0.1 21 0.00013854025350967802 3.068938913501593e-05 8.297850483571805e-05 0.17725110054016113
+h0.05 41 3.4158097587222436e-05 7.579970658741179e-06 2.0494856681370354e-05 0.3509225845336914
+h0.025 81 8.534241362045947e-06 1.8950683913135111e-06 5.12391892131883e-06 0.6919841766357422
+h0.0125 161 2.1334770895498067e-06 4.7383330938222117e-07 1.281158754282143e-06 1.3603515625
+h0.00625 321 5.333544521590738e-07 1.1846036542449242e-07 3.2029519916386147e-07 2.7166998386383057
+finite-difference exact...
+finite-difference runtime...
+FreeFlux 0.3.8 source-faithful runtime validation
+================================================================
+freeflux_version: 0.3.8
+git_commit: ec05c47bbc2e4ac58bb85d39408ff4ef4016a15c
+official_fixture_round_match: True
+official_grid_max_abs_vs_exact: 0.004583549773031936
+finest_grid_max_abs_vs_exact: 5.333544521590738e-07
+finest_grid_rms_vs_exact: 1.1846036542449242e-07
+observed_convergence_order_max_error: 2.0003023868651
+sensitivity_internal_max_step: 0.0125
+sensitivity_global_max_abs: 4.626543592678445e-06
+sensitivity_global_rms: 4.5512266280693815e-07
+sensitivity_global_relative_Frobenius: 1.4293875696890994e-05
+sensitivity_worst_parameter_relative_L2: (7.073428311239958e-05, 'log v6b')
+target_emus: ['Glu_123', 'Glu_12345', 'Cit_2345']
+target_times: [0.0, 0.1, 0.2, 0.5, 1.0, 2.0]
+compatibility_changes: ['np.float -> float', 'scipy.linalg.pinv2 -> pinv', 'fitting/optimization/display layers omitted']
+
+Per-parameter sensitivity comparison:
+  log v3       max=1.390e-06 rms=3.522e-07 relL2=9.764e-06
+  log v4       max=4.627e-06 rms=9.964e-07 relL2=1.722e-05
+  log v6b      max=6.875e-08 rms=1.377e-08 relL2=7.073e-05
+  log C_OAA    max=1.389e-07 rms=2.833e-08 relL2=7.001e-05
+  log C_Cit    max=3.582e-06 rms=7.981e-07 relL2=1.220e-05
+  log C_AKG    max=5.115e-07 rms=1.072e-07 relL2=2.425e-05
+  log C_Suc    max=1.399e-06 rms=2.895e-07 relL2=3.971e-05
+  log C_Fum    max=3.575e-07 rms=7.703e-08 relL2=6.834e-05
+  log C_Glu    max=5.439e-07 rms=9.097e-08 relL2=8.150e-06
+runtime Jacobian refinement: h=0.00625, n_timepoints=321
+elapsed_seconds=51.294079
+global_max_abs=1.1566303470544881e-06
+global_rms=1.1378604836602514e-07
+relative_Frobenius=3.5736379756468492e-06
+worst_parameter=log v6b
+worst_relative_L2=1.7663117582683201e-05
+COMPUTE_ONLY_REPO: manuscript LaTeX table artifact intentionally not written
+{
+  "freeflux_version": "0.3.8",
+  "git_commit": "ec05c47bbc2e4ac58bb85d39408ff4ef4016a15c",
+  "execution_type": "source-faithful extraction of the official simulation path",
+  "python_environment": "Python 3.13 compatibility audit",
+  "compatibility_changes": [
+    "np.float -> float",
+    "scipy.linalg.pinv2 -> scipy.linalg.pinv",
+    "fitting/optimization/result-display layers omitted"
+  ],
+  "official_fixture_round_match": true,
+  "official_grid_max_abs": 0.004583549773031936,
+  "official_grid_rms": 0.0007834498695758882,
+  "finest_step": 0.006250000000000089,
+  "finest_max_abs": 5.333544521590738e-07,
+  "finest_rms": 1.1846036542449242e-07,
+  "trajectory_order_max": 2.0003023868651,
+  "trajectory_order_rms": 1.9998946140900322,
+  "sensitivity_step": 0.00625,
+  "sensitivity_global_max_abs": 1.156630347054488e-06,
+  "sensitivity_global_rms": 1.1378604836602514e-07,
+  "sensitivity_relative_Frobenius": 3.573637975646849e-06,
+  "sensitivity_worst_parameter": "log v6b",
+  "sensitivity_worst_relative_L2": 1.76631175826832e-05,
+  "sensitivity_order_max": 2.0000069240333023,
+  "sensitivity_order_rms": 1.9999317515031838,
+  "sensitivity_order_relative_Frobenius": 1.9999317515031838
+}
+=== END   FreeFlux v1.0.0 source-faithful runtime cross-check | rc=0 elapsed=90 s ===
+=== START FreeFlux finite-noise and nonlinear profiles | 2026-10-02T04:54:07Z ===
+{
+  "noise_model": {
+    "delta": 0.0001,
+    "sigma_ilr": 0.08,
+    "sigma_log_pool": 0.1,
+    "seed": 20260905
+  },
+  "q1": {
+    "log v3": -0.05644172747016289,
+    "log v4": -0.08433553685631355,
+    "log v6b": -0.16630208106248281,
+    "log C_OAA": 0.3137051307053632,
+    "log C_Cit": -0.07596512302491755,
+    "log C_AKG": -0.5975417262137753,
+    "log C_Suc": -0.19719829351253212,
+    "log C_Fum": 0.6425200911163903,
+    "log C_Glu": 0.22155926631843037
+  },
+  "q2": {
+    "log v3": -0.029721409215095126,
+    "log v4": -0.03525716874764413,
+    "log v6b": 0.5152322872424933,
+    "log C_OAA": -0.7288411949940642,
+    "log C_Cit": -0.0326327083942558,
+    "log C_AKG": -0.029959430448462027,
+    "log C_Suc": -0.06793614934249968,
+    "log C_Fum": 0.4400723586967572,
+    "log C_Glu": -0.03095658479722918
+  },
+  "local": [
+    {
+      "design": "baseline",
+      "identifiable_dim": 7,
+      "sigma_min": 0.09378294707504052,
+      "sigma_second_min": 0.9193490974219686,
+      "se_q1": 1.0877260909968491,
+      "se_q2": 10.66291933867189
+    },
+    {
+      "design": "fum",
+      "identifiable_dim": 8,
+      "sigma_min": 1.0220688868217214,
+      "sigma_second_min": 1.0459941059586857,
+      "se_q1": 0.9625280882825855,
+      "se_q2": 0.7534234591832547
+    },
+    {
+      "design": "asp",
+      "identifiable_dim": 8,
+      "sigma_min": 3.314999893744522,
+      "sigma_second_min": 4.795942550664646,
+      "se_q1": 0.2041054077301427,
+      "se_q2": 0.16822245294829488
+    },
+    {
+      "design": "pool",
+      "identifiable_dim": 9,
+      "sigma_min": 1.2023454477477524,
+      "sigma_second_min": 4.781262260806832,
+      "se_q1": 0.2041054076508484,
+      "se_q2": 0.1682224529693666
+    }
+  ],
+  "profile_intervals": [
+    {
+      "design": "baseline",
+      "profile95_lo": null,
+      "profile95_hi": null,
+      "profile95_width": null
+    },
+    {
+      "design": "fum",
+      "profile95_lo": -1.3214671741612196,
+      "profile95_hi": null,
+      "profile95_width": null
+    },
+    {
+      "design": "asp",
+      "profile95_lo": -0.38927211439687515,
+      "profile95_hi": 0.21049947969334093,
+      "profile95_width": 0.5997715940902161
+    },
+    {
+      "design": "pool",
+      "profile95_lo": -0.38927211496093733,
+      "profile95_hi": 0.2104994794055096,
+      "profile95_width": 0.5997715943664469
+    }
+  ]
+}
+=== END   FreeFlux finite-noise and nonlinear profiles | rc=0 elapsed=652 s ===
+=== START FreeFlux refined profile verification | 2026-10-02T05:04:59Z ===
+  design         a  chi2_min  delta_chi2_best  two_start_abs_chi2_difference
+baseline -2.000000 54.846258         0.050934                   8.338219e-11
+baseline  2.000000 54.846258         0.250630                   3.577014e-10
+     fum -1.280247 69.487034         3.840018                   3.987310e-09
+     fum  2.000000 69.487034         0.356199                   8.300560e-10
+     asp -0.403851 85.611744         3.839973                   5.002647e-10
+     asp  0.212244 85.611744         3.840007                   6.457412e-11
+{
+  "baseline": {
+    "a_minus2": 0.05093360820897175,
+    "a_plus2": 0.25063010501123983
+  },
+  "fum": {
+    "lower_root_test_a": -1.280247,
+    "lower_delta_chi2": 3.8400177650111544,
+    "a_plus2_delta_chi2": 0.3561986333893259
+  },
+  "asp": {
+    "lower_root_test_a": -0.403851,
+    "lower_delta_chi2": 3.839972610069168,
+    "upper_root_test_a": 0.212244,
+    "upper_delta_chi2": 3.840007283932394,
+    "width": 0.616095
+  }
+}
+V101_FREEFLUX_PROFILE_REFINEMENT_COMPLETED
+=== END   FreeFlux refined profile verification | rc=0 elapsed=400 s ===
+=== START FreeFlux SVD/FDM toy audit | 2026-10-02T05:11:39Z ===
+h=8.0e-05 baseline smin=0.0937829463697 se2=10.6629194188 angle=0.000e+00 sec=1.40
+h=8.0e-05 fum      smin=1.02206889015 se2=0.75342345792 angle=nan sec=1.40
+h=8.0e-05 asp      smin=3.31499988776 se2=0.168222453048 angle=nan sec=1.55
+h=8.0e-05 pool     smin=1.20234546459 se2=0.168222453074 angle=nan sec=1.54
+h=4.0e-05 baseline smin=0.0937829473299 se2=10.6629193096 angle=0.000e+00 sec=1.40
+h=4.0e-05 fum      smin=1.02206888759 se2=0.75342345895 angle=nan sec=1.41
+h=4.0e-05 asp      smin=3.31499989267 se2=0.168222452935 angle=nan sec=1.55
+h=4.0e-05 pool     smin=1.20234545101 se2=0.168222452945 angle=nan sec=1.54
+h=2.0e-05 baseline smin=0.093782947075 se2=10.6629193386 angle=0.000e+00 sec=1.39
+h=2.0e-05 fum      smin=1.02206888682 se2=0.753423459183 angle=nan sec=1.39
+h=2.0e-05 asp      smin=3.31499989374 se2=0.168222452948 angle=nan sec=1.53
+h=2.0e-05 pool     smin=1.20234544775 se2=0.168222452969 angle=nan sec=1.53
+h=1.0e-05 baseline smin=0.0937829465147 se2=10.6629194023 angle=0.000e+00 sec=1.39
+h=1.0e-05 fum      smin=1.02206888738 se2=0.753423459561 angle=nan sec=1.39
+h=1.0e-05 asp      smin=3.31499989419 se2=0.168222452951 angle=nan sec=1.54
+h=1.0e-05 pool     smin=1.20234544647 se2=0.168222452988 angle=nan sec=1.53
+h=5.0e-06 baseline smin=0.0937829470667 se2=10.6629193396 angle=0.000e+00 sec=1.38
+h=5.0e-06 fum      smin=1.02206888477 se2=0.753423460891 angle=nan sec=1.39
+h=5.0e-06 asp      smin=3.3149998921 se2=0.168222452992 angle=nan sec=1.53
+h=5.0e-06 pool     smin=1.20234544563 se2=0.16822245299 angle=nan sec=1.53
+DONE {
+  "runtime_seconds": 29.332372426986694,
+  "reference_h_theta": 2e-05,
+  "svd_cutoff": "max(A.shape)*eps_machine*sigma_max",
+  "q_reference": "baseline two weakest singular directions at h_theta=2e-5",
+  "files": [
+    "toy_svd_fdm_audit.csv",
+    "toy_fd_step_differences.csv",
+    "toy_svd_vs_gram.csv"
+  ]
+}
+=== END   FreeFlux SVD/FDM toy audit | rc=0 elapsed=31 s ===
+=== START FreeFlux exact positional-isotopomer FDM audit | 2026-10-02T05:12:10Z ===
+h 4e-05 norm 0.8105241579302862 smin 1.4548648801938738e-11 sec 0.43497562408447266
+h 2e-05 norm 0.810524158032292 smin 1.8776509700424363e-11 sec 0.409442663192749
+h 1e-05 norm 0.8105241578145698 smin 4.2749818464987696e-11 sec 0.4090886116027832
+h 5e-06 norm 0.8105241577268716 smin 1.2505628807353843e-10 sec 0.4099104404449463
+h 2.5e-06 norm 0.8105241577301573 smin 2.1622489598950105e-10 sec 0.4088928699493408
+       h  h_over_2  rel_Frobenius_Jh_minus_Jh2  max_abs_Jh_minus_Jh2
+0.000040  0.000020                5.009145e-10          1.151856e-10
+0.000020  0.000010                8.614725e-10          1.332268e-10
+0.000010  0.000005                1.286285e-09          2.553513e-10
+0.000005  0.000003                3.139873e-09          7.327472e-10
+=== END   FreeFlux exact positional-isotopomer FDM audit | rc=0 elapsed=3 s ===
+=== START FreeFlux OAA-Fum symbolic check | 2026-10-02T05:12:13Z ===
+=== END   FreeFlux OAA-Fum symbolic check | rc=0 elapsed=0 s ===
+=== START Synechocystis exact discrete Jacobian + genericization | 2026-10-02T05:12:13Z ===
+generic_exactJ eps=1 sub=64 d=0.100 rank_full=59 sigma_tail=[9.40767357e-07 7.45050641e-07 3.11026438e-07] elapsed=18.21s
+generic_exactJ eps=0.5 sub=64 d=0.100 rank_full=59 sigma_tail=[9.87758040e-07 4.90281115e-07 3.29974305e-07] elapsed=18.49s
+generic_exactJ eps=0.25 sub=64 d=0.100 rank_full=59 sigma_tail=[1.00687115e-06 3.48497747e-07 2.60183245e-07] elapsed=18.77s
+generic_exactJ eps=0.125 sub=64 d=0.100 rank_full=59 sigma_tail=[9.49176048e-07 3.51169289e-07 1.35088116e-07] elapsed=18.87s
+generic_exactJ eps=0.0625 sub=64 d=0.100 rank_full=59 sigma_tail=[6.87070257e-07 3.53241805e-07 6.84100562e-08] elapsed=18.72s
+generic_exactJ eps=0.03125 sub=64 d=0.100 rank_full=59 sigma_tail=[3.88366120e-07 3.45622102e-07 3.43887503e-08] elapsed=19.24s
+generic_exactJ eps=0.015625 sub=64 d=0.100 rank_full=59 sigma_tail=[3.58540833e-07 1.91740412e-07 1.72364095e-08] elapsed=19.39s
+generic_exactJ eps=0.0078125 sub=64 d=0.100 rank_full=59 sigma_tail=[3.58286864e-07 9.65407348e-08 8.62822955e-09] elapsed=19.11s
+generic_exactJ eps=0.00390625 sub=64 d=0.100 rank_full=59 sigma_tail=[3.58353250e-07 4.83459672e-08 4.31655906e-09] elapsed=19.49s
+generic_exactJ eps=0.001953125 sub=64 d=0.100 rank_full=59 sigma_tail=[3.58416508e-07 2.41816100e-08 2.15888248e-09] elapsed=19.77s
+generic_exactJ eps=1 sub=16 d=0.100 rank_full=59 sigma_tail=[9.46526037e-07 8.53766823e-07 3.09123676e-07] elapsed=6.54s
+generic_exactJ eps=1 sub=32 d=0.100 rank_full=59 sigma_tail=[9.41574270e-07 7.69146349e-07 3.10791138e-07] elapsed=10.35s
+generic_exactJ eps=0.015625 sub=16 d=0.100 rank_full=59 sigma_tail=[3.54454128e-07 1.89998950e-07 1.82500151e-08] elapsed=7.03s
+generic_exactJ eps=0.015625 sub=32 d=0.100 rank_full=59 sigma_tail=[3.57577926e-07 1.92105935e-07 1.74785125e-08] elapsed=11.17s
+generic_exactJ eps=0.001953125 sub=16 d=0.100 rank_full=59 sigma_tail=[3.53973854e-07 2.39875357e-08 2.28407553e-09] elapsed=7.50s
+generic_exactJ eps=0.001953125 sub=32 d=0.100 rank_full=59 sigma_tail=[3.57401745e-07 2.42319045e-08 2.18879465e-09] elapsed=11.50s
+genericization change {"C_PG_original": 10.0, "C_Gc_original": 10.0, "C_PG_generic": 11.0, "C_Gc_generic": 9.0, "relative_2norm": 1.854488751141529e-06, "max_abs_component": 4.15705189521498e-06, "rms_component": 6.000640671820648e-07, "elapsed_original_seconds": 18.535900354385376}
+genericity_d0.08 eps=0.015625 sub=16 d=0.080 rank_full=59 sigma_tail=[2.83104790e-07 1.89419997e-07 1.82499307e-08] elapsed=7.03s
+genericity_d0.08 eps=0.001953125 sub=16 d=0.080 rank_full=59 sigma_tail=[2.81867976e-07 2.39871437e-08 2.28407658e-09] elapsed=7.34s
+genericity_d0.10 eps=0.015625 sub=16 d=0.100 rank_full=59 sigma_tail=[3.54454128e-07 1.89998950e-07 1.82500151e-08] elapsed=7.15s
+genericity_d0.10 eps=0.001953125 sub=16 d=0.100 rank_full=59 sigma_tail=[3.53973854e-07 2.39875357e-08 2.28407553e-09] elapsed=7.52s
+genericity_d0.12 eps=0.015625 sub=16 d=0.120 rank_full=59 sigma_tail=[4.27287418e-07 1.90215300e-07 1.82500555e-08] elapsed=7.18s
+genericity_d0.12 eps=0.001953125 sub=16 d=0.120 rank_full=59 sigma_tail=[4.27182201e-07 2.39877077e-08 2.28407416e-09] elapsed=7.50s
+V101_EXACT_J_FULL_COMPLETED
+=== END   Synechocystis exact discrete Jacobian + genericization | rc=0 elapsed=319 s ===
+=== START Synechocystis exact-J analysis | 2026-10-02T05:17:32Z ===
+ mode_id    slope3   slope4    slope5    slope6  deep_proj_F6P_GAP  deep_proj_PGminusGc   sigma_deep
+      59  0.999390 0.999049  0.998467  0.997415           0.999999             0.000654 2.158882e-09
+      58  0.998614 0.995926  0.999856  0.975719           0.988814             0.006563 2.418161e-08
+      56 -0.000102 0.000681  0.003722  0.015775           0.011356             0.036293 1.268880e-06
+      57 -0.000261 0.000123 -0.010413 -0.007441           0.006875             0.998679 3.584165e-07
+ epsilon  rank  sigma_second_smallest   sigma_null  null_scale_alignment  scale_residual_rel  quotient_sigma_min
+1.000000    59           3.110264e-07 4.307399e-15                   1.0        5.878717e-15        3.110264e-07
+0.015625    59           1.723641e-08 8.764155e-15                   1.0        1.377476e-14        1.723641e-08
+0.001953    59           2.158882e-09 8.151493e-15                   1.0        1.335771e-14        2.158882e-09
+V101_GENERIC_ANALYSIS_COMPLETED
+=== END   Synechocystis exact-J analysis | rc=0 elapsed=12 s ===
+=== START Synechocystis Step-3 metadata | 2026-10-02T05:17:44Z ===
+STEP3_METADATA_WRITTEN /mnt/fscratch/users/tic_118_uma/frv/asymptotic-identifiability-inst-mfa-v101-rc1-clean/validation/synechocystis_v101/results/step3_metadata.npz
+=== END   Synechocystis Step-3 metadata | rc=0 elapsed=12 s ===
+=== START Synechocystis design lifting + finite noise | 2026-10-02T05:17:56Z ===
+[
+  {
+    "family": "conditioned_scale_known",
+    "design": "baseline",
+    "n_m0": 57,
+    "n_m1": 2,
+    "n_m2": 0,
+    "n_other": 0
+  },
+  {
+    "family": "conditioned_scale_known",
+    "design": "F6P",
+    "n_m0": 58,
+    "n_m1": 1,
+    "n_m2": 0,
+    "n_other": 0
+  },
+  {
+    "family": "conditioned_scale_known",
+    "design": "GAP",
+    "n_m0": 58,
+    "n_m1": 1,
+    "n_m2": 0,
+    "n_other": 0
+  },
+  {
+    "family": "conditioned_scale_known",
+    "design": "both",
+    "n_m0": 59,
+    "n_m1": 0,
+    "n_m2": 0,
+    "n_other": 0
+  }
+]
+[
+  {
+    "family": "full_60_parameter",
+    "design": "F6P",
+    "n_m0": 58,
+    "n_m1": 2,
+    "n_m2": 0,
+    "n_other": 0
+  },
+  {
+    "family": "full_60_parameter",
+    "design": "GAP",
+    "n_m0": 58,
+    "n_m1": 2,
+    "n_m2": 0,
+    "n_other": 0
+  },
+  {
+    "family": "full_60_parameter",
+    "design": "both",
+    "n_m0": 59,
+    "n_m1": 1,
+    "n_m2": 0,
+    "n_other": 0
+  },
+  {
+    "family": "full_60_parameter",
+    "design": "both+scale",
+    "n_m0": 60,
+    "n_m1": 0,
+    "n_m2": 0,
+    "n_other": 0
+  }
+]
+         design  nparam  rank  sigma_min  sigma_second  sd_mode_max  sd_mode_second  se_logC_F6P  se_logC_GAP  se_fast_contrast  se_fast_sum  se_scale_normalized  se_global_log_scale_beta
+  cond_baseline      59    59   0.000019      0.000054 53757.435029    18454.443306 39221.700958 37689.943251      53737.403159  8435.943934             0.000075                  0.000008
+       cond_F6P      59    59   0.000054      0.000087 18491.378403    11522.330519     0.100000 11460.042997       8103.474116  8103.474115             0.000021                  0.000002
+       cond_GAP      59    59   0.000054      0.000084 18524.571270    11957.178095 11925.790824     0.100000       8432.807563  8432.807562             0.000037                  0.000004
+      cond_both      59    59   0.000055      0.000547 18279.095216     1828.974521     0.100000     0.100000          0.100000     0.100000             0.000000                  0.000000
+      full_both      60    60   0.000018      0.000055 57127.676780    18263.336603     0.100000     0.100000          0.100000     0.100000         56421.181531               5914.546907
+full_both_scale      60    60   0.000055      0.000544 18281.963860     1838.181861     0.100000     0.100000          0.100000     0.100000           225.841353                 23.674607
+=== END   Synechocystis design lifting + finite noise | rc=0 elapsed=1 s ===
+=== START Synechocystis local-null audit | 2026-10-02T05:17:57Z ===
+                                label  epsilon  subdivisions  rank  sigma_max  sigma_second_smallest   sigma_null  null_to_second  null_scale_alignment  scale_residual_rel  quotient_sigma_min  standard_rank  max_abs_log_concentration_shift  output_relative_change_vs_nominal  output_max_abs_change_vs_nominal
+                 generic_nominal_eps1 1.000000            64    59   0.868210           3.110264e-07 4.307399e-15    1.384898e-08                   1.0        5.878717e-15        3.110264e-07             59                              NaN                                NaN                               NaN
+              generic_nominal_eps1_64 0.015625            64    59   0.873571           1.723641e-08 8.764155e-15    5.084676e-07                   1.0        1.377476e-14        1.723641e-08             59                              NaN                                NaN                               NaN
+             generic_nominal_eps1_512 0.001953            64    59   0.873792           2.158882e-09 8.151493e-15    3.775793e-06                   1.0        1.335771e-14        2.158882e-09             59                              NaN                                NaN                               NaN
+nearby_random_concentration_5pct_eps1 1.000000            16    59   0.868311           3.491001e-07 1.643759e-14    4.708561e-08                   1.0        2.231676e-14        3.491001e-07             59                             0.05                           0.004084                          0.003491
+{
+  "all_rank_59": true,
+  "min_null_scale_alignment": 0.9999999999999987,
+  "max_scale_residual_rel": 2.2316755547416435e-14,
+  "nearby_output_relative_change": 0.004083601134296177,
+  "nearby_max_abs_log_concentration_shift": 0.05,
+  "global_structural_identifiability_claim": false
+}
+V101_LOCAL_NULL_AUDIT_COMPLETED
+=== END   Synechocystis local-null audit | rc=0 elapsed=19 s ===
+=== START Synechocystis physical epsilon=1 finite-noise control | 2026-10-02T05:18:16Z ===
+         design  sigma_min  se_logC_F6P  se_logC_GAP  se_normalized_scale_direction  weakest_proj_scale  weakest_proj_PGminusGc  weakest_proj_F6P_GAP
+  cond_baseline    0.00005   683.372167   634.415890                       0.000029        1.075337e-17                0.999631          1.662050e-03
+       cond_F6P    0.00005     0.100000   317.180952                       0.000000        2.508391e-17                0.999633          1.869435e-03
+       cond_GAP    0.00005   341.657009     0.100000                       0.000013        9.664026e-18                0.999652          1.818991e-03
+      cond_both    0.00005     0.100000     0.100000                       0.000040        1.025421e-17                0.999677          2.419504e-10
+      full_both    0.00005     0.100000     0.100000                    1624.319137        9.511128e-03                0.999588          1.175538e-11
+full_both_scale    0.00005     0.100000     0.100000                     233.875500        3.138519e-03                0.999681          2.099049e-10
+{
+  "epsilon": 1.0,
+  "conditioned_baseline_F6P_GAP_SE": [
+    683.3721667909304,
+    634.4158896976636
+  ],
+  "conditioned_both_F6P_GAP_SE": [
+    0.09999999569156348,
+    0.09999999501480224
+  ],
+  "scale_anchor_observation_log_sd": 0.1,
+  "note": "The 0.10 value is the assumed log-scale SD of the directly measured anchor; Euclidean coefficients along normalized parameter-space scale vectors are coordinate projections, not the anchor measurement uncertainty."
+}
+V101_PHYSICAL_EPS1_CONTROL_COMPLETED
+=== END   Synechocystis physical epsilon=1 finite-noise control | rc=0 elapsed=0 s ===
+=== START Key scientific figure refresh | 2026-10-02T05:18:16Z ===
+V101_KEY_FIGURES_COMPLETED
+=== END   Key scientific figure refresh | rc=0 elapsed=3 s ===
+=== START Frozen-v15 numerical claim audit | 2026-10-02T05:18:19Z ===
+PASS genericization observable change ~1.85e-6
+PASS rank 59 at eps=1,1/64,1/512
+PASS null aligns with global scale
+PASS analytic scale residual near machine precision
+PASS two F6P/GAP modes have m=1 slopes
+PASS weighted baseline retains two m=1 modes
+PASS nearby 5% concentration perturbation rank 59
+PASS nearby output change ~4.08e-3
+PASS nearby null remains scale-aligned
+PASS physical eps=1 baseline F6P SE ~683
+PASS physical eps=1 baseline GAP SE ~634
+PASS physical eps=1 both pools pin F6P/GAP to ~0.10
+PASS regularized ILR calibration removes artificial near-zero tail
+PASS FreeFlux baseline local SE(q2)
+PASS FreeFlux +Fum local SE(q2)
+PASS FreeFlux +Fum+Asp local SE(q2)
+PASS FreeFlux linearized MC baseline q2
+PASS FreeFlux linearized MC fum q2
+PASS FreeFlux linearized MC asp q2
+PASS fum profile threshold at a=-1.280247
+PASS fum two-start agreement at a=-1.280247
+PASS asp profile threshold at a=-0.403851
+PASS asp two-start agreement at a=-0.403851
+PASS asp profile threshold at a=0.212244
+PASS asp two-start agreement at a=0.212244
+PASS Fum has no upper crossing through a=2
+PASS baseline has no crossing on [-2,2]
+PASS toy centered-difference refinement stable
+PASS exact FreeFlux FDM refinement below runtime discretization error
+PASS synthetic validation cases all PASS
+V15_CLAIM_AUDIT=PASS
+=== END   Frozen-v15 numerical claim audit | rc=0 elapsed=1 s ===
+=== START No-paper-artifacts guard | 2026-10-02T05:18:20Z ===
+NO_PAPER_ARTIFACTS=PASS
+=== END   No-paper-artifacts guard | rc=0 elapsed=0 s ===
+FULL_SCIENTIFIC_REPRODUCTION_V101_COMPLETED

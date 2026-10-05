@@ -1,0 +1,63 @@
+{
+  "rank_audit": [
+    {
+      "epsilon": 1.0,
+      "rank": 59,
+      "sigma_second_smallest": 3.110264382821461e-07,
+      "sigma_null": 4.307398956624862e-15,
+      "null_scale_alignment": 0.9999999999999998,
+      "scale_residual_rel": 5.8787170028872356e-15,
+      "quotient_sigma_min": 3.110264382824277e-07
+    },
+    {
+      "epsilon": 0.015625,
+      "rank": 59,
+      "sigma_second_smallest": 1.7236409462964063e-08,
+      "sigma_null": 8.764155157710319e-15,
+      "null_scale_alignment": 1.0,
+      "scale_residual_rel": 1.3774759390799115e-14,
+      "quotient_sigma_min": 1.72364094629146e-08
+    },
+    {
+      "epsilon": 0.001953125,
+      "rank": 59,
+      "sigma_second_smallest": 2.1588824809467907e-09,
+      "sigma_null": 8.151492768580904e-15,
+      "null_scale_alignment": 0.9999999999999988,
+      "scale_residual_rel": 1.3357711268187024e-14,
+      "quotient_sigma_min": 2.158882480958068e-09
+    }
+  ],
+  "fast_mode_exponents": [
+    {
+      "mode_id": 59,
+      "slope3": 0.9993899232309205,
+      "slope4": 0.9990490807805685,
+      "slope5": 0.998466578750407,
+      "slope6": 0.9974151706984228,
+      "deep_proj_F6P_GAP": 0.9999987061946892,
+      "deep_proj_PGminusGc": 0.0006541032874249114,
+      "sigma_deep": 2.158882480958069e-09
+    },
+    {
+      "mode_id": 58,
+      "slope3": 0.9986137517197887,
+      "slope4": 0.9959258943254047,
+      "slope5": 0.9998557265315002,
+      "slope6": 0.9757191861068442,
+      "deep_proj_F6P_GAP": 0.9888141260393375,
+      "deep_proj_PGminusGc": 0.006562826757344698,
+      "sigma_deep": 2.418161004224488e-08
+    }
+  ],
+  "genericization_output_change": {
+    "C_PG_original": 10.0,
+    "C_Gc_original": 10.0,
+    "C_PG_generic": 11.0,
+    "C_Gc_generic": 9.0,
+    "relative_2norm": 1.854488751141529e-06,
+    "max_abs_component": 4.15705189521498e-06,
+    "rms_component": 6.000640671820648e-07,
+    "elapsed_original_seconds": 18.535900354385376
+  }
+}

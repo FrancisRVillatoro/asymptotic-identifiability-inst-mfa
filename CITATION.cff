@@ -6,14 +6,11 @@ authors:
   - family-names: Villatoro
     given-names: Francisco R.
     affiliation: "Universidad de Málaga"
-version: "1.0.0"
-date-released: 2026-09-13
+version: "1.0.1"
+date-released: 2026-10-05
 repository-code: "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa"
 license: GPL-3.0-only
 identifiers:
-  - type: doi
-    value: "10.5281/zenodo.22737809"
-    description: "Zenodo DOI for version v1.0.0"
   - type: doi
     value: "10.5281/zenodo.22737808"
     description: "Zenodo concept DOI for all versions"

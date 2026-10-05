@@ -1,0 +1,8 @@
+{
+  "all_rank_59": true,
+  "min_null_scale_alignment": 0.9999999999999987,
+  "max_scale_residual_rel": 2.2316755547416435e-14,
+  "nearby_output_relative_change": 0.004083601134296177,
+  "nearby_max_abs_log_concentration_shift": 0.05,
+  "global_structural_identifiability_claim": false
+}

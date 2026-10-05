@@ -1,6 +1,6 @@
 {
   "title": "Asymptotic identifiability orders: reproducibility code and data",
-  "description": "Scientific source code, input data, machine-readable numerical outputs, audit records, and reproducible scientific figures supporting the study 'Asymptotic Identifiability Orders and Order Lifting by Experimental Design in Isotopically Nonstationary 13C Metabolic Flux Analysis'. Manuscript files are intentionally not included.",
+  "description": "Scientific source code, input data, machine-readable numerical outputs, audit records, and reproducible scientific figures supporting the study 'Asymptotic Identifiability Orders and Order Lifting by Experimental Design in Isotopically Nonstationary 13C Metabolic Flux Analysis'. Version 1.0.1 incorporates the post-review discrete-consistent Jacobian, benchmark genericization, final nonlinear-profile audit, scale-accounting and finite-noise controls. Manuscript files are intentionally not included.",
   "creators": [
     {
       "name": "Villatoro, Francisco R.",
@@ -8,7 +8,7 @@
     }
   ],
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "GPL-3.0-only",
   "keywords": [
     "13C metabolic flux analysis",

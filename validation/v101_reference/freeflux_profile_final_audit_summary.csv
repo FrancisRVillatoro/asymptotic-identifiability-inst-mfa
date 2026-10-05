@@ -1,0 +1,4 @@
+design,result,lower_a,upper_a,aux_value
+baseline,"no crossing on [-2,2]",,,0.250630103963978
++Fum slow,one lower crossing,-1.2802470437533662,,0.3561985722275409
++Fum + Asp-fast,two-sided crossing,-0.4038511922194009,0.21224369938243903,0.61609489160184

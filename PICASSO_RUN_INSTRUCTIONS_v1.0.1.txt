@@ -1,0 +1,47 @@
+V1.0.1 v1.0.1 — clean staging and Picasso run
+============================================
+
+This RC must be applied to a clean checkout of public tag v1.0.0.
+Do not tag, push, or create a Zenodo version yet.
+
+WSL / Windows
+-------------
+cd /mnt/c/Users/FRVillatoro/Downloads
+rm -rf asymptotic-identifiability-inst-mfa-v101-rc1
+git clone https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa.git asymptotic-identifiability-inst-mfa-v101-rc1
+cd asymptotic-identifiability-inst-mfa-v101-rc1
+git checkout v1.0.0
+unzip -o ../asymptotic_identifiability_v101_rc1_overlay.zip -d .
+python3 scripts/v101_preflight.py
+python3 scripts/verify_inherited_v100.py
+cd /mnt/c/Users/FRVillatoro/Downloads
+tar -czf asymptotic-identifiability-inst-mfa-v101-rc1.tar.gz asymptotic-identifiability-inst-mfa-v101-rc1
+sha256sum asymptotic-identifiability-inst-mfa-v101-rc1.tar.gz
+scp asymptotic-identifiability-inst-mfa-v101-rc1.tar.gz frv@picasso3.scbi.uma.es:~/fscratch/
+
+Picasso
+-------
+cd ~/fscratch
+rm -rf asymptotic-identifiability-inst-mfa-v101-rc1
+tar -xzf asymptotic-identifiability-inst-mfa-v101-rc1.tar.gz
+cd asymptotic-identifiability-inst-mfa-v101-rc1
+python scripts/v101_preflight.py
+python scripts/verify_inherited_v100.py
+JOBID=$(sbatch --parsable run_full_science_picasso.slurm)
+echo "$JOBID"
+squeue -l -j "$JOBID"
+
+After completion
+----------------
+sacct -j "$JOBID" --format=JobID,JobName,State,ExitCode,Elapsed,TotalCPU,MaxRSS,ReqMem,AllocCPUS
+cat audit/full_science_v101_success.json
+RUN=$(ls -dt audit/full_runs_v101/* | head -1)
+cat "$RUN/SCIENCE_RUN_SUMMARY.txt"
+grep -E 'FULL_SCIENTIFIC_REPRODUCTION_V101_COMPLETED|V15_CLAIM_AUDIT=PASS|V101_CANDIDATE=' "$RUN/science_stdout.log" "$RUN/SCIENCE_RUN_SUMMARY.txt"
+
+Required final status
+---------------------
+EXIT_CODE=0
+COMPLETION_MARKER_FOUND=true
+V15_CLAIM_AUDIT_PASS=true
+V101_CANDIDATE=VERIFIED

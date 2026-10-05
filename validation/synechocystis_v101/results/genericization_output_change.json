@@ -1,0 +1,10 @@
+{
+  "C_PG_original": 10.0,
+  "C_Gc_original": 10.0,
+  "C_PG_generic": 11.0,
+  "C_Gc_generic": 9.0,
+  "relative_2norm": 1.854488751141529e-06,
+  "max_abs_component": 4.15705189521498e-06,
+  "rms_component": 6.000640671820648e-07,
+  "elapsed_original_seconds": 18.535900354385376
+}

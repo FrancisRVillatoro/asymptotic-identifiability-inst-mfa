@@ -1,0 +1,13 @@
+{
+  "epsilon": 1.0,
+  "conditioned_baseline_F6P_GAP_SE": [
+    683.3721667909304,
+    634.4158896976636
+  ],
+  "conditioned_both_F6P_GAP_SE": [
+    0.09999999569156348,
+    0.09999999501480224
+  ],
+  "scale_anchor_observation_log_sd": 0.1,
+  "note": "The 0.10 value is the assumed log-scale SD of the directly measured anchor; Euclidean coefficients along normalized parameter-space scale vectors are coordinate projections, not the anchor measurement uncertainty."
+}

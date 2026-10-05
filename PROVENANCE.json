@@ -1,33 +1,20 @@
 {
-  "canonical_scientific_run": "2279016",
+  "canonical_scientific_run": "2570248",
+  "canonical_run_stamp_utc": "20261002T045228Z",
   "run_result": {
-    "phase": "scientific_compute",
-    "stamp_utc": "20260910T191415Z",
-    "run_dir": "audit/full_runs/20260910T191415Z",
     "exit_code": 0,
     "completion_marker_found": true,
-    "end_utc": "2026-09-10T19:30:33Z",
-    "stdout_sha256": "039690dc1e07b3a0a1ce2defd716864df61e920e516c101b9d0ae2e6f9e7895b",
-    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "outputs_after_science_sha256_file_sha256": "b883e433dd524ed0c3ac27b378de2a0c3f67f990f6323fc7a65d4f0df43f5c43"
+    "v15_claim_audit_pass": true,
+    "v101_candidate_verified": true
   },
-  "snapshot_sha256": "7078b21716283592a828da3f742e9d637f34df2b94ddaf1750f6ca0c714b43b5",
-  "file_count_excluding_manifest": 206,
-  "forbidden_artifacts_removed": [
-    "validation/freeflux_runtime/freeflux_runtime_table.tex"
-  ],
-  "policy": "scientific code + data + numerical outputs + scientific audit + figures/figure code only; no manuscript, bibliography, LaTeX sources, or LaTeX build artifacts",
-  "release_version": "1.0.0",
+  "scientific_freeze_sha256": "3d352a8054c2ad2e7c6c4e758e17f17b43866fb217f89d4dee0c6c3a577e98cb",
+  "release_version": "1.0.1",
   "public_repository": "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa",
-  "licenses": {
-    "code": "GPL-3.0-only",
-    "original_data_figures_documentation": "CC-BY-4.0",
-    "third_party": "see THIRD_PARTY_NOTICES.md"
-  },
+  "github_release": "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa/releases/tag/v1.0.1",
   "zenodo": {
-    "version": "1.0.0",
-    "version_doi": "10.5281/zenodo.22737809",
-    "concept_doi": "10.5281/zenodo.22737808"
+    "concept_doi": "10.5281/zenodo.22737808",
+    "version_doi": null
   },
-  "github_release": "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa/releases/tag/v1.0.0"
+  "policy": "scientific code + data + numerical outputs + scientific audit + figures/figure code only; no manuscript, bibliography, LaTeX sources, or LaTeX build artifacts",
+  "global_structural_identifiability_claim": false
 }

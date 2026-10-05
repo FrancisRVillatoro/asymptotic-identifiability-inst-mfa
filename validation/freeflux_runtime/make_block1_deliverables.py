@@ -259,7 +259,7 @@ Observed sensitivity convergence order & $2.0000$ \\
 \end{tabular}
 \end{table}
 '''
-(ROOT/'freeflux_runtime_table.tex').write_text(tex_table,encoding='utf-8')
+print('COMPUTE_ONLY_REPO: manuscript LaTeX table artifact intentionally not written')
 
 # ---------------------------------------------------------------------
 # Supported-environment untouched package runner

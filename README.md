@@ -1,6 +1,6 @@
 # Asymptotic identifiability — reproducibility code and data
 
-This repository contains **code, data, machine-readable numerical outputs, audit logs, and reproducible figure files** supporting the study
+This repository contains **code, data, machine-readable numerical outputs, audit records, and reproducible scientific figures** supporting the study
 
 **Asymptotic Identifiability Orders and Order Lifting by Experimental Design in Isotopically Nonstationary 13C Metabolic Flux Analysis**
 
@@ -8,78 +8,45 @@ by Francisco R. Villatoro.
 
 The manuscript itself is **not** part of this repository. Paper sources and article PDFs are distributed only through the journal/preprint channel.
 
-## Scientific reproduction
+## Version v1.0.1
 
-The compute-only scientific pipeline is
+Version `v1.0.1` incorporates the post-review scientific corrections verified by the clean Picasso end-to-end rerun (job `2570248`, run stamp `20261002T045228Z`):
+
+- discrete-consistent Fréchet Jacobian for the Synechocystis benchmark;
+- genericization from `C_PG=C_Gc=10` to `C_PG=11`, `C_Gc=9`;
+- 16/32/64 internal-subdivision convergence checks and overlap-based mode tracking;
+- scale-conditioned and full 60-parameter design lifting;
+- regularized-ILR finite-noise calculations with direct-SVD covariance;
+- nearby-point local-null audit;
+- physical-point (`epsilon=1`) finite-noise control;
+- final FreeFlux SVD/FDM and nonlinear-profile refinement audits;
+- regenerated synthetic validation and automated checks against the frozen manuscript claims.
+
+The successful run records `EXIT_CODE=0`, `COMPLETION_MARKER_FOUND=true`, `V15_CLAIM_AUDIT_PASS=true`, and `V101_CANDIDATE=VERIFIED`.
+
+## Full scientific reproduction
+
+Run
 
 ```bash
 bash reproduce_science.sh
 ```
 
-It reruns:
-
-1. FreeFlux source-faithful runtime validation and sensitivity refinement;
-2. the network-based synthetic Synechocystis sensitivity/order analyses;
-3. the fast/slow partition sweep and diagnostics;
-4. the finite-noise/profile calculations;
-5. the Python finite-noise figure refresh.
-
-For provenance capture, use
+For provenance capture use
 
 ```bash
 bash run_full_science_audit.sh
 ```
 
-which records the software environment, stdout/stderr, timing, before/after SHA-256 manifests and a machine-readable completion record under `audit/full_runs/<UTC timestamp>/`.
-
-## Tested Picasso environment
-
-The final post-patch end-to-end scientific rerun (job 2279016) completed with exit code 0 on the UMA SCBI Picasso cluster using:
-
-- Python 3.9.13
-- NumPy 1.24.4
-- SciPy 1.9.1
-- pandas 1.4.4
-- Matplotlib 3.5.2
-- openpyxl 3.0.10
-- SymPy 1.10.1
-
-The runtime compatibility layer also supports newer pandas by using `DataFrame.map` when available and `DataFrame.applymap` on pandas 1.4.x.
-
-## Repository contents
-
-- `data/`: frozen numerical inputs and summary data;
-- `validation/freeflux_runtime/`: Block 1 FreeFlux validation;
-- `validation/synechocystis_block2/`: network-based synthetic Synechocystis benchmark;
-- `validation/partition_block3/`: partition sweep and weak-subspace diagnostics;
-- `validation/block4_finite_noise/`: finite-noise and profile calculations;
-- `validation/block5_feasibility/`: experimental-feasibility support;
-- `figure_sources/`: Python sources for reproducible scientific figures;
-- `figures/`: rendered reproducible figures;
-- `scripts/`: repository/audit helper scripts;
-- `audit/`: provenance manifests and final-run evidence.
-
-## Reproducibility policy
-
-The canonical v1.0.0 release baseline is the **post-patch successful full run**, not the older pre-patch Block-6 package. The release-assembly script `scripts/assemble_postpatch_release.py` combines this code tree with the archived scientific snapshot from job 2279016, freezes the new canonical SHA-256 manifest, verifies that no manuscript files are present, and creates the final code-and-data archive.
-
-No LaTeX compilation is part of the scientific reproduction workflow.
+On Picasso use `run_full_science_picasso.slurm`.
 
 ## Strict content policy
 
-This repository deliberately excludes manuscript files and manuscript-build
-artifacts. In particular, it contains no `.tex`, `.bib`, `.bbl`, article PDF,
-Biber/LaTeX build logs, or manuscript-verification scripts. Rendered scientific
-figures are included only as reproducibility outputs; their scientific source
-code lives under `figure_sources/` or the corresponding validation directory.
-Run `python scripts/guard_no_paper_artifacts.py` to verify this policy.
+The scientific repository contains no article `.tex`, `.bib`, article PDF, or manuscript-build artifacts. Scientific figure outputs are allowed; manuscript files remain in the journal/preprint channel.
 
-## Archived release and DOI
+## Archived release
 
-The exact reproducibility release supporting the associated article is:
+- GitHub release: https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa/releases/tag/v1.0.1
+- Zenodo concept DOI (all versions): https://doi.org/10.5281/zenodo.22737808
 
-- **Version v1.0.0:** https://doi.org/10.5281/zenodo.22737809
-- **Concept DOI (all versions):** https://doi.org/10.5281/zenodo.22737808
-
-For exact computational reproducibility of the published results, please cite
-the version DOI `10.5281/zenodo.22737809`.
+The Zenodo version DOI for `v1.0.1` is added to `main` immediately after the GitHub-triggered Zenodo archive is published.

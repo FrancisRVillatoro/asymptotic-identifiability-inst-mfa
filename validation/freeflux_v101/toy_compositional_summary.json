@@ -1,0 +1,90 @@
+{
+  "noise_model": {
+    "delta": 0.0001,
+    "sigma_ilr": 0.08,
+    "sigma_log_pool": 0.1,
+    "seed": 20260905
+  },
+  "q1": {
+    "log v3": -0.05644172747016289,
+    "log v4": -0.08433553685631355,
+    "log v6b": -0.16630208106248281,
+    "log C_OAA": 0.3137051307053632,
+    "log C_Cit": -0.07596512302491755,
+    "log C_AKG": -0.5975417262137753,
+    "log C_Suc": -0.19719829351253212,
+    "log C_Fum": 0.6425200911163903,
+    "log C_Glu": 0.22155926631843037
+  },
+  "q2": {
+    "log v3": -0.029721409215095126,
+    "log v4": -0.03525716874764413,
+    "log v6b": 0.5152322872424933,
+    "log C_OAA": -0.7288411949940642,
+    "log C_Cit": -0.0326327083942558,
+    "log C_AKG": -0.029959430448462027,
+    "log C_Suc": -0.06793614934249968,
+    "log C_Fum": 0.4400723586967572,
+    "log C_Glu": -0.03095658479722918
+  },
+  "local": [
+    {
+      "design": "baseline",
+      "identifiable_dim": 7,
+      "sigma_min": 0.09378294707504052,
+      "sigma_second_min": 0.9193490974219686,
+      "se_q1": 1.0877260909968491,
+      "se_q2": 10.66291933867189
+    },
+    {
+      "design": "fum",
+      "identifiable_dim": 8,
+      "sigma_min": 1.0220688868217214,
+      "sigma_second_min": 1.0459941059586857,
+      "se_q1": 0.9625280882825855,
+      "se_q2": 0.7534234591832547
+    },
+    {
+      "design": "asp",
+      "identifiable_dim": 8,
+      "sigma_min": 3.314999893744522,
+      "sigma_second_min": 4.795942550664646,
+      "se_q1": 0.2041054077301427,
+      "se_q2": 0.16822245294829488
+    },
+    {
+      "design": "pool",
+      "identifiable_dim": 9,
+      "sigma_min": 1.2023454477477524,
+      "sigma_second_min": 4.781262260806832,
+      "se_q1": 0.2041054076508484,
+      "se_q2": 0.1682224529693666
+    }
+  ],
+  "profile_intervals": [
+    {
+      "design": "baseline",
+      "profile95_lo": null,
+      "profile95_hi": null,
+      "profile95_width": null
+    },
+    {
+      "design": "fum",
+      "profile95_lo": -1.3214671741612196,
+      "profile95_hi": null,
+      "profile95_width": null
+    },
+    {
+      "design": "asp",
+      "profile95_lo": -0.38927211439687515,
+      "profile95_hi": 0.21049947969334093,
+      "profile95_width": 0.5997715940902161
+    },
+    {
+      "design": "pool",
+      "profile95_lo": -0.38927211496093733,
+      "profile95_hi": 0.2104994794055096,
+      "profile95_width": 0.5997715943664469
+    }
+  ]
+}

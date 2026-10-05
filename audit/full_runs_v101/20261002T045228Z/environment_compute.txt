@@ -1,0 +1,17 @@
+phase=v1.0.1_candidate_scientific_compute
+stamp_utc=20261002T045228Z
+start_utc=2026-10-02T04:52:28Z
+host=sd048
+pwd=/mnt/fscratch/users/tic_118_uma/frv/asymptotic-identifiability-inst-mfa-v101-rc1-clean
+uname=Linux sd048 6.4.0-150600.23.87-default #1 SMP PREEMPT_DYNAMIC Tue Feb  3 14:58:48 UTC 2026 (0f213a3) x86_64 x86_64 x86_64 GNU/Linux
+python=/mnt/home/soft/anaconda/programs/x86_64/anaconda3-2022.10/bin/python
+Python 3.9.13
+numpy=1.24.4
+scipy=1.9.1
+pandas=1.4.4
+matplotlib=3.5.2
+openpyxl=3.0.10
+sympy=1.10.1
+OMP_NUM_THREADS=1
+OPENBLAS_NUM_THREADS=1
+MKL_NUM_THREADS=1

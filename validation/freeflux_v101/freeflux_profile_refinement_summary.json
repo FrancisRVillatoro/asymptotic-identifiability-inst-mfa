@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "a_minus2": 0.05093360820897175,
+    "a_plus2": 0.25063010501123983
+  },
+  "fum": {
+    "lower_root_test_a": -1.280247,
+    "lower_delta_chi2": 3.8400177650111544,
+    "a_plus2_delta_chi2": 0.3561986333893259
+  },
+  "asp": {
+    "lower_root_test_a": -0.403851,
+    "lower_delta_chi2": 3.839972610069168,
+    "upper_root_test_a": 0.212244,
+    "upper_delta_chi2": 3.840007283932394,
+    "width": 0.616095
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "v1.0.1_candidate_scientific_compute",
+  "stamp_utc": "20261002T045228Z",
+  "run_dir": "audit/full_runs_v101/20261002T045228Z",
+  "exit_code": 0,
+  "completion_marker_found": true,
+  "v15_claim_audit_pass": true,
+  "end_utc": "2026-10-02T05:18:20Z"
+}

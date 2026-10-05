@@ -1,0 +1,10 @@
+alpha = 5/7
+beta = 3/5
+Delta = 4/7
+tauO = 1/175
+tauF = 2/125
+tauO/tauF = 5/14
+denominator = 2*D**2/21875 + 19*D/875 + 4/7
+M1*q = Matrix([[0]])
+delta log(tauO*tauF) along q = 9
+second-order coefficient = -9/6250

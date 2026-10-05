@@ -1,0 +1,31 @@
+PASS genericization observable change ~1.85e-6
+PASS rank 59 at eps=1,1/64,1/512
+PASS null aligns with global scale
+PASS analytic scale residual near machine precision
+PASS two F6P/GAP modes have m=1 slopes
+PASS weighted baseline retains two m=1 modes
+PASS nearby 5% concentration perturbation rank 59
+PASS nearby output change ~4.08e-3
+PASS nearby null remains scale-aligned
+PASS physical eps=1 baseline F6P SE ~683
+PASS physical eps=1 baseline GAP SE ~634
+PASS physical eps=1 both pools pin F6P/GAP to ~0.10
+PASS regularized ILR calibration removes artificial near-zero tail
+PASS FreeFlux baseline local SE(q2)
+PASS FreeFlux +Fum local SE(q2)
+PASS FreeFlux +Fum+Asp local SE(q2)
+PASS FreeFlux linearized MC baseline q2
+PASS FreeFlux linearized MC fum q2
+PASS FreeFlux linearized MC asp q2
+PASS fum profile threshold at a=-1.280247
+PASS fum two-start agreement at a=-1.280247
+PASS asp profile threshold at a=-0.403851
+PASS asp two-start agreement at a=-0.403851
+PASS asp profile threshold at a=0.212244
+PASS asp two-start agreement at a=0.212244
+PASS Fum has no upper crossing through a=2
+PASS baseline has no crossing on [-2,2]
+PASS toy centered-difference refinement stable
+PASS exact FreeFlux FDM refinement below runtime discretization error
+PASS synthetic validation cases all PASS
+V15_CLAIM_AUDIT=PASS

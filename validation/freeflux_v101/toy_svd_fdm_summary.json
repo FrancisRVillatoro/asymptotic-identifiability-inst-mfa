@@ -1,0 +1,11 @@
+{
+  "runtime_seconds": 29.332372426986694,
+  "reference_h_theta": 2e-05,
+  "svd_cutoff": "max(A.shape)*eps_machine*sigma_max",
+  "q_reference": "baseline two weakest singular directions at h_theta=2e-5",
+  "files": [
+    "toy_svd_fdm_audit.csv",
+    "toy_fd_step_differences.csv",
+    "toy_svd_vs_gram.csv"
+  ]
+}
