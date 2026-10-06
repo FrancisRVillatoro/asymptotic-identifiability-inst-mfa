@@ -13,7 +13,7 @@
   "github_release": "https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa/releases/tag/v1.0.1",
   "zenodo": {
     "concept_doi": "10.5281/zenodo.22737808",
-    "version_doi": null
+    "version_doi": "10.5281/zenodo.23186150"
   },
   "policy": "scientific code + data + numerical outputs + scientific audit + figures/figure code only; no manuscript, bibliography, LaTeX sources, or LaTeX build artifacts",
   "global_structural_identifiability_claim": false

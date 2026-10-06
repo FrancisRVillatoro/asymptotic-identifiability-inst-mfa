@@ -47,6 +47,7 @@ The scientific repository contains no article `.tex`, `.bib`, article PDF, or ma
 ## Archived release
 
 - GitHub release: https://github.com/FrancisRVillatoro/asymptotic-identifiability-inst-mfa/releases/tag/v1.0.1
+- Zenodo version DOI: https://doi.org/10.5281/zenodo.23186150
 - Zenodo concept DOI (all versions): https://doi.org/10.5281/zenodo.22737808
 
-The Zenodo version DOI for `v1.0.1` is added to `main` immediately after the GitHub-triggered Zenodo archive is published.
+For exact computational reproducibility of the manuscript results, cite the version DOI `10.5281/zenodo.23186150`.

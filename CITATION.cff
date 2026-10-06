@@ -12,5 +12,8 @@ repository-code: "https://github.com/FrancisRVillatoro/asymptotic-identifiabilit
 license: GPL-3.0-only
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.23186150"
+    description: "Zenodo DOI for version v1.0.1"
+  - type: doi
     value: "10.5281/zenodo.22737808"
     description: "Zenodo concept DOI for all versions"
